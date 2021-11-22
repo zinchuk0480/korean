@@ -1,0 +1,84 @@
+{% extends "main_page.html" %}
+
+{% block words %}
+	<div class='top_page'>
+
+		<h1 class='title_page'> 
+			Все слова 
+			<sup class="title_page_sup"> {{ words[0]|length }} </sup> 
+		</h1>  
+		<button id='btn_opacity' class='btn_navigation'> Test your self </button>
+	</div>
+
+
+	<div class="container">
+
+		<div class="navigation">
+			<ul class="ul_navigation">
+
+				<li> 
+					<button class='btn_navigation btn_active' 
+									value='Все слова'> 
+										Все слова 
+										<sup> {{ words[0]|length }} </sup>
+					</button> 
+				</li>
+
+				{% for i in range(words[2]|length) %}
+					<li> 
+						<button class='btn_navigation' 
+										value="{{ words[2][i] }}"> 
+											{{ words[2][i] }} 
+											<sup> {{ words[1][i]|length }} </sup>
+						</button> 
+					</li>
+				{% endfor %}	
+
+				{% for i in range(words[4]|length) %}
+					<li> 
+						<button class='btn_navigation numbers' 
+										value="{{ words[4][i] }}"> 
+											{{ words[4][i] }} 
+											<sup> {{ words[4][i]|length }} </sup>
+						</button> 
+					</li>
+				{% endfor %}	
+
+			</ul>
+		</div>
+		
+			<ul class='word_list list_active'>
+				{% for word in words[0] %}
+					<li>
+						<span class="korean"> {{ word[0] }} </span>
+						<span class="russian"> {{ word[1] }} </span>
+					</li>
+				{% endfor %}
+			</ul> 
+
+			{% for category in words[1] %} 
+				<ul class='word_list'>
+					{% for word in category %}
+						<li>
+							<span class="korean"> {{ word[0] }} </span>
+							<span class="russian"> {{ word[1] }} </span>
+						</li>
+					{% endfor %}
+				</ul>
+			{% endfor %}
+
+			{% for category in words[3] %} 
+				<ul class='word_list'>
+					{% for word in category %}
+						<li>
+							<span class="korean"> {{ word[0] }} </span>
+							<span class="russian"> {{ word[1] }} </span>
+						</li>
+					{% endfor %}
+				</ul>
+			{% endfor %}
+
+
+		<div class='call_navigation'> </div>
+	</div>
+{% endblock %}

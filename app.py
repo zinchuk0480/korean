@@ -29,43 +29,42 @@ for _, __, files in walk(numbers_dir):
 		numb_file_name.append(n)
 numb_file_name = sorted(numb_file_name)
 
-all_huyal = word_file_name + numb_file_name
 
 
 # Все файлы
 @app.context_processor
 def words_list():
 
+	segment_num = []
+	for file_name in numb_file_name:
+		each_file_num = open(path.join(numbers_dir, file_name), 'r').read()
+
+		num = []
+		for i in each_file_num.split('\n'):
+			if len(i) >= 2:
+				num.append(tuple(i.split('=')))
+			try:
+				num = sorted(num, key=lambda x: int(float(x[1])))
+			except:
+				num = sorted(num, key=lambda x: x[1])
+
+		segment_num.append(num)	
+
+
+
 	segment_wor = []
 	for file_name in word_file_name:
-#		try:
 		each_file = open(path.join(words_dir, file_name), 'r').read()
-#		except:
-#			each_file = open(path.join(numbers_dir, file_name), 'r').read()
-
-
-	#segment_num = []
-	#for file_name in numb_file_name:
-	#		each_file_num = open(path.join(numbers_dir, file_name), 'r').read()
-
 
 		wor = []
 		for i in each_file.split('\n'):
 			if len(i) >= 2:
 				wor.append(tuple(i.split('=')))
-				wor = sorted(wor, key=lambda x: x[1])
-		segment_wor.append(wor)
-	
-#	num = []
-#	for i in each_file_num.split('\n'):
-#		if len(i) >= 1:
-#			num.append(tuple(i.split('=')))
-#			try:
-#				num = sorted(num, key=lambda x: int(x[1]))
-#			except:
-#				num = sorted(num, key=lambda x: x[1])
-#	segment_num.append(num)
 
+			wor = sorted(wor, key=lambda x: x[1])
+
+		segment_wor.append(wor)
+		
 
 	all_word = []	
 	for i in segment_wor:
@@ -78,10 +77,11 @@ def words_list():
 	for i in word_file_name:
 		category_name.append(path.splitext(i)[0])
 
-#	for i in numb_file_name:
-#		category_name.append(path.splitext(i)[0])
+	category_name_number = []
+	for i in numb_file_name:
+		category_name_number.append(path.splitext(i)[0])
 
-	return dict(words = (all_word, segment_wor, category_name))
+	return dict(words = (all_word, segment_wor, category_name, segment_num, category_name_number))
 
 
 
