@@ -29,6 +29,7 @@ body{
 	position: relative;
 	#top: 120px;
 	width: fit-content;
+	width: -moz-fit-content;
 	#transform: translateX(-50%);
 }
 
@@ -83,6 +84,7 @@ ul, li{
 ul{
 	display: block;
 	min-width: fit-content;
+	width: -moz-fit-content;
 	width: 40%;
 	max-width: 1200px;
 /*	margin: 0 auto; */
@@ -179,6 +181,7 @@ li:hover ::before{
 		bottom: -50%;
 		transform: translate(0%, -50%);
 		width: fit-content;
+		width: -moz-fit-content;
 		max-width: 70%;
 		height: 90%;
 		overflow: scroll;
