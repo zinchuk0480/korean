@@ -1,0 +1,99 @@
+{% extends "main_page.html" %}
+
+{% block keyboard %}
+
+
+<div class="wraper">
+
+	<div class="additional_container"> 
+		<a href="/">
+			<button class='btn_navigation btn_active btn_keyboard_page' value='К словам'> К словам </button>
+		</a>
+		<div class="errors_counter"> Ошибки: <span id="errors"> 0 </span> </div>
+		<div class="like_input" id="tinput"></div>
+		<textarea id="tarea" rows="10" value='asdf', autofocus></textarea>
+	</div>
+
+
+<div class="keyboard_container">
+
+	<div class="keyboard_field">
+		<div class="key_row">
+			<div class="key" id="key_q">
+				<div class="key_shift">ㅃ</div>
+				<div class="key_simple">ㅂ</div>
+			</div>
+			<div class="key" id="key_w">
+				<div class="key_shift">ㅉ</div>
+				<div class="key_simple">ㅈ</div>
+			</div>
+			<div class="key" id="key_e">
+				<div class="key_shift">ㄸ</div>
+				<div class="key_simple">ㄷ</div>
+			</div>
+			<div class="key" id="key_r">
+				<div class="key_shift">ㄲ</div>
+				<div class="key_simple">ㄱ</div>
+			</div>
+			<div class="key" id="key_t">
+				<div class="key_shift">ㅆ</div>
+				<div class="key_simple">ㅅ</div>
+			</div>
+			<div class="key" id="key_y">ㅛ</div>
+			<div class="key" id="key_u">ㅕ</div>
+			<div class="key" id="key_i">ㅑ</div>
+			<div class="key" id="key_o">
+				<div class="key_shift">ㅒ</div>
+				<div class="key_simple">ㅐ</div>
+			</div>
+			<div class="key" id="key_p">
+				<div class="key_shift">ㅖ</div>
+				<div class="key_simple">ㅔ</div>
+			</div>
+			<div class="key" id="key_br_left">[</div>
+			<div class="key" id="key_br_right">]</div>
+		</div>
+
+		<div class="key_row">
+			<div class="key" id="key_a">ㅁ</div>
+			<div class="key" id="key_s">ㄴ</div>
+			<div class="key" id="key_d">ㅇ</div>
+			<div class="key" id="key_f">ㄹ</div>
+			<div class="key" id="key_g">ㅎ</div>
+			<div class="key" id="key_h">ㅗ</div>
+			<div class="key" id="key_j">ㅓ</div>
+			<div class="key" id="key_k">ㅏ</div>
+			<div class="key" id="key_l">ㅣ</div>
+			<div class="key" id="key_semicolon">;</div>
+			<div class="key" id="key_quote">'</div>
+		</div>
+
+
+		<div class="key_row">
+			<div class="key shift" id="key_shift_left"> Shift </div>
+
+			<div class="key" id="key_z">ㅋ</div>
+			<div class="key" id="key_x">ㅌ</div>
+			<div class="key" id="key_c">ㅊ</div>
+			<div class="key" id="key_v">ㅍ</div>
+			<div class="key" id="key_b">ㅠ</div>
+			<div class="key" id="key_n">ㅜ</div>
+			<div class="key" id="key_m">ㅡ</div>
+			<div class="key" id="key_coma">,</div>
+			<div class="key" id="key_period">.</div>
+			<div class="key" id="key_slash">/</div>
+
+			<div class="key shift" id="key_shift_right"> Shift </div>
+		</div>
+
+		<div class="key_row">
+			<div class="key space" id="key_space"> </div>
+		</div>
+
+	</div>
+	
+</div>
+</div>
+
+
+{% endblock %}
