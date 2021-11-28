@@ -4,13 +4,18 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	word_list = document.querySelectorAll('.word_list');	
 	
-
+	sub_menu_btn = document.querySelectorAll('.sub_menu_btn'); // btn_sub_menu
+	sub_time_list = document.querySelectorAll('.sub_time_list'); // sub_list
+	
 	translation_word = document.querySelectorAll('.russian');
 	words = Array.from(translation_word)
 
 	btn_self_testing = document.getElementById('btn_opacity');
 	container = document.querySelector('.navigation');
 	btn_navigation = container.querySelectorAll('.btn_navigation');
+
+	time_block = document.querySelector('.sub_menu_list');
+	btn_sub_menu_time = time_block.querySelectorAll('.sub_menu_btn');
 
 	call_nav = document.querySelector('.call_navigation');
 	
@@ -21,10 +26,10 @@ document.addEventListener('DOMContentLoaded', function(){
 		for (let i = 0; i < words.length; i++){
 			words[i].classList.toggle('opacity_cl');	
 			if (words[i].classList.contains('opacity_cl')){
-				btn_self_testing.innerHTML = 'Return word';
+				btn_self_testing.innerHTML = 'Return translate';
 				btn_self_testing.style.backgroundColor = '#6f8';
 			} else {
-				btn_self_testing.innerHTML = 'Test your self';
+				btn_self_testing.innerHTML = 'Hide translate';
 				btn_self_testing.style.backgroundColor = '#5afa';
 			}
 		}
@@ -58,6 +63,41 @@ document.addEventListener('DOMContentLoaded', function(){
 	}
 
 
+
+
+	for (let i = 0; i < sub_menu_btn.length; i++){
+		sub_menu_btn[i].addEventListener('click', function(){
+			Remove_active_btn_sub_menu();
+			this.classList.add('btn_sub_menu_active');
+			Active_list_sub_menu();
+			//active_list = document.querySelectorAll('.list_active > li');	
+			//console.log(this.value);
+			//title_page.innerHTML = this.value + '<sup> ' + active_list.length + ' </sup>';
+			active_list_sub = document.querySelectorAll('.active_sub_list > li');	
+			title_page.innerHTML = 'Время '+ '<sup> ' + active_list_sub.length + ' </sup>';
+		});
+	}
+
+	// SUB MENU BTN
+	function Remove_active_btn_sub_menu(){
+		for(let i=0; i < sub_menu_btn.length; i++){
+			sub_menu_btn[i].classList.remove('btn_sub_menu_active');	
+		}
+	}
+
+	function Active_list_sub_menu(){
+		for(let i = 0; i < sub_time_list.length; i++){
+			sub_time_list[i].classList.remove('active_sub_list');
+			if(sub_menu_btn[i].classList.contains('btn_sub_menu_active')){
+				sub_time_list[i].classList.add('active_sub_list');
+			}
+		}	
+	}
+
+
+
+
+
 	call_nav.addEventListener('click', function(){
 		console.log(pageYOffset);
 		console.log(call_nav.clientHeight);
@@ -69,4 +109,8 @@ document.addEventListener('DOMContentLoaded', function(){
 		call_nav.classList.toggle('call_navigation_after');
 	}
 
+
+
+
+	
 });

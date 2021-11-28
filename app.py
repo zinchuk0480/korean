@@ -15,6 +15,8 @@ app.secret_key = 'dev'
 app_dir = path.dirname(__file__)
 words_dir = path.join(app_dir, 'static/words_and_digit/words')
 numbers_dir = path.join(app_dir, 'static/words_and_digit/numbers')
+words_time_dir = path.join(app_dir, 'static/words_and_digit/words_time')
+
 
 word_file_name = []
 for _, __, files in walk(words_dir):
@@ -22,6 +24,11 @@ for _, __, files in walk(words_dir):
 		word_file_name.append(f)
 word_file_name = sorted(word_file_name)
 
+word_time_file_name = []
+for _, __, files in walk(words_time_dir):
+	for f in files:
+		word_time_file_name.append(f)
+word_time_file_name = sorted(word_time_file_name)
 
 numb_file_name = []
 for _, __, files in walk(numbers_dir):
@@ -47,8 +54,19 @@ def words_list():
 				num = sorted(num, key=lambda x: int(float(x[1])))
 			except:
 				num = sorted(num, key=lambda x: x[1])
-
 		segment_num.append(num)	
+
+
+
+	segment_time_wor = []
+	for file_name in word_time_file_name:
+		each_file = open(path.join(words_time_dir, file_name), 'r').read()
+
+		wor_time = []
+		for i in each_file.split('\n'):
+			if len(i) >= 2:
+				wor_time.append(tuple(i.split('=')))
+		segment_time_wor.append(wor_time)
 
 
 
@@ -60,9 +78,7 @@ def words_list():
 		for i in each_file.split('\n'):
 			if len(i) >= 2:
 				wor.append(tuple(i.split('=')))
-
 			wor = sorted(wor, key=lambda x: x[1])
-
 		segment_wor.append(wor)
 		
 
@@ -73,15 +89,41 @@ def words_list():
 	
 	all_word = sorted(all_word, key=lambda x: x[1])
 
+
+	all_word_time = []	
+	for i in segment_time_wor:
+		for j in i:
+			all_word_time.append(j)
+	
+	all_word_time = sorted(all_word_time, key=lambda x: x[1])
+
+
 	category_name = []
 	for i in word_file_name:
 		category_name.append(path.splitext(i)[0])
+
+
+	category_name_time = []
+	for i in word_time_file_name:
+		category_name_time.append(path.splitext(i)[0])
+
 
 	category_name_number = []
 	for i in numb_file_name:
 		category_name_number.append(path.splitext(i)[0])
 
-	return dict(words = (all_word, segment_wor, category_name, segment_num, category_name_number))
+
+	return dict(words = (
+								all_word, 
+								segment_wor, 
+								category_name, 
+								segment_num, 
+								category_name_number, 
+								segment_time_wor, 
+								category_name_time, 
+								all_word_time
+							)
+						)
 
 
 

@@ -4,6 +4,30 @@ body{
 	overflow-y: scroll;
 }
 
+ul, li{
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+.word_list li:nth-child(2n){
+	background-color: #eef8f9;	
+}
+
+ul{
+	display: block;
+	/*min-width: fit-content;*/
+	width: -moz-fit-content;
+	width: 40%;
+	max-width: 1200px;
+/*	margin: 0 auto; */
+	padding: 0px 10px;
+}
+
+li{
+	display: flex;
+	padding: 0px 20px;
+}
 .top_page{
 	position: relative;
 	display: block;
@@ -51,6 +75,48 @@ body{
 .btn_navigation:hover{
 	background-color: #7bfb;
 }
+
+.sub_menu_list{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px auto;
+	min-width: 100%;
+	width: 100%;
+}
+.sub_menu_list li:nth-child(2n){
+	background-color: #55aafff5;	
+}
+.sub_menu_btn,
+.sub_menu_list li:nth-child(2n){
+	width: fit-content;
+	width: -moz-fit-content;
+	height: 2rem;
+	margin: 10px 10px;
+	line-height: 2rem;
+	text-align: center;
+	white-space: nowrap;
+	border-radius: 7px;
+	background-color: #55aafff5;
+	cursor: pointer;	
+}
+.sub_menu_btn:hover,
+.sub_menu_list li:nth-child(2n):hover{
+	background-color: #7bfb;
+}
+.btn_sub_menu_active{
+	background-color: #66ff88!important;
+}
+
+.sub_time_list{
+	display: none;
+	width: 100%;
+}
+.active_sub_list{
+	display: block;
+	width: 100%;
+}
+
+
 .numbers{
 	background-color: #c78956f5;
 }
@@ -70,30 +136,6 @@ body{
 
 .list_active{
 	display: block;
-}
-ul, li{
-	padding: 0px;
-	margin: 0px;
-	list-style: none;
-}
-
-.word_list li:nth-child(2n){
-	background-color: #eef8f9;	
-}
-
-ul{
-	display: block;
-	min-width: fit-content;
-	width: -moz-fit-content;
-	width: 40%;
-	max-width: 1200px;
-/*	margin: 0 auto; */
-	padding: 0px 10px;
-}
-
-li{
-	display: flex;
-	padding: 0px 20px;
 }
 
 .russian{
@@ -135,10 +177,29 @@ li:hover ::before{
 	flex: 0.3 0 auto;
 }
 
+.ul_navigation a{
+	margin-bottom: 10px;
+}
+
+.to_keyboard{
+	width: 100%;
+	height: 3rem;
+	padding: 0 20px;
+	margin: 0 0 20px 0;
+	border-radius: 7px;
+	background-color: #55aafff5;
+	cursor: pointer;
+}
+
+.to_keyboard:hover{
+	background-color: #7bfb;
+}
 
 
 
-@media screen and (max-width: 500px){
+
+
+@media screen and (max-width: 600px){
 	.top_page{
 		width: 100%;
 	}

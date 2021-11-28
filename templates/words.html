@@ -7,20 +7,32 @@
 			Все слова 
 			<sup class="title_page_sup"> {{ words[0]|length }} </sup> 
 		</h1>  
-		<button id='btn_opacity' class='btn_navigation'> Test your self </button>
+		<button id='btn_opacity' class='btn_navigation'> Hide translate </button>
 	</div>
 
 
 	<div class="container">
 
 		<div class="navigation">
-			<ul class="ul_navigation">
 
+			<a href="/keyboard">
+				<button id='btn_keyword' class='to_keyboard'> Keyboard </button>
+			</a>
+
+			<ul class="ul_navigation">
 				<li> 
 					<button class='btn_navigation btn_active' 
 									value='Все слова'> 
 										Все слова 
 										<sup> {{ words[0]|length }} </sup>
+					</button> 
+				</li>
+
+				<li> 
+					<button class='btn_navigation' 
+									value='Время'> 
+										Время 
+										<sup> {{ words[7]|length }} </sup>
 					</button> 
 				</li>
 
@@ -55,6 +67,37 @@
 					</li>
 				{% endfor %}
 			</ul> 
+
+
+			<ul class='word_list'>
+					<ul class="sub_menu_list">
+							<li class="sub_menu_btn btn_sub_menu_active"> Все время </li>	
+						{% for category_name in words[6] %}
+							<li class="sub_menu_btn" value="{{words[6]|length}}"> {{ category_name }} </li>	
+						{% endfor %}
+					</ul>
+
+				<ul class="sub_time_list active_sub_list">
+					{% for word in words[7] %} 
+							<li>
+								<span class="korean"> {{ word[0] }} </span>
+								<span class="russian"> {{ word[1] }} </span>
+							</li>
+					{% endfor %}
+				</ul>
+
+				{% for category in words[5] %}
+					<ul class="sub_time_list">
+						{% for word in category %}
+							<li>
+								<span class="korean"> {{ word[0] }} </span>
+								<span class="russian"> {{ word[1] }} </span>
+							</li>
+						{% endfor %}
+					</ul>
+				{% endfor %} 
+			</ul>
+
 
 			{% for category in words[1] %} 
 				<ul class='word_list'>
