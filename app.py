@@ -18,23 +18,18 @@ numbers_dir = path.join(app_dir, 'static/words_and_digit/numbers')
 words_time_dir = path.join(app_dir, 'static/words_and_digit/words_time')
 
 
-word_file_name = []
-for _, __, files in walk(words_dir):
-	for f in files:
-		word_file_name.append(f)
-word_file_name = sorted(word_file_name)
+def Get_name_files(full_path, sort=True):
+	file_names = []
+	for _, __, files in walk(full_path):
+		for f in files:
+			file_names.append(f)
+	if sort:
+		file_names = sorted(file_names)
+	return file_names 
 
-word_time_file_name = []
-for _, __, files in walk(words_time_dir):
-	for f in files:
-		word_time_file_name.append(f)
-word_time_file_name = sorted(word_time_file_name)
-
-numb_file_name = []
-for _, __, files in walk(numbers_dir):
-	for n in files:
-		numb_file_name.append(n)
-numb_file_name = sorted(numb_file_name)
+word_file_name = Get_name_files(words_dir)
+word_time_file_name = Get_name_files(words_time_dir)
+numb_file_name = Get_name_files(numbers_dir)
 
 
 
@@ -42,75 +37,55 @@ numb_file_name = sorted(numb_file_name)
 @app.context_processor
 def words_list():
 
-	segment_num = []
-	for file_name in numb_file_name:
-		each_file_num = open(path.join(numbers_dir, file_name), 'r').read()
+	def Colect_all_word(full_path, file_names_arr, sort=True, num=False):
+		segment = []
+		for file_name in file_names_arr:
+			each_file = open(path.join(full_path, file_name), 'r').read()
 
-		num = []
-		for i in each_file_num.split('\n'):
-			if len(i) >= 2:
-				num.append(tuple(i.split('=')))
-			try:
-				num = sorted(num, key=lambda x: int(float(x[1])))
-			except:
-				num = sorted(num, key=lambda x: x[1])
-		segment_num.append(num)	
+			words_from_file = []
+			for i in each_file.split('\n'):
+				if len(i) >= 2:
+					words_from_file.append(tuple(i.split('=')))
+				if sort:
+					words_from_file = sorted(words_from_file, key=lambda x: x[1])
+				if num:
+					try:
+						words_from_file = sorted(words_from_file, key=lambda x: int(float(x[1])))
+					except:
+						words_from_file = sorted(words_from_file, key=lambda x: x[1])
 
+			segment.append(words_from_file)
+		return segment
 
-
-	segment_time_wor = []
-	for file_name in word_time_file_name:
-		each_file = open(path.join(words_time_dir, file_name), 'r').read()
-
-		wor_time = []
-		for i in each_file.split('\n'):
-			if len(i) >= 2:
-				wor_time.append(tuple(i.split('=')))
-		segment_time_wor.append(wor_time)
+	segment_time_wor = Colect_all_word(words_time_dir, word_time_file_name, False) 
+	segment_num = Colect_all_word(numbers_dir, numb_file_name, False, True) 
+	segment_wor = Colect_all_word(words_dir, word_file_name)  	
 
 
 
-	segment_wor = []
-	for file_name in word_file_name:
-		each_file = open(path.join(words_dir, file_name), 'r').read()
-
-		wor = []
-		for i in each_file.split('\n'):
-			if len(i) >= 2:
-				wor.append(tuple(i.split('=')))
-			wor = sorted(wor, key=lambda x: x[1])
-		segment_wor.append(wor)
+	def Get_all_words_from_collection(segment):
+		all_words = []	
+		for i in segment:
+			for j in i:
+				all_words.append(j)
 		
+		all_words = sorted(all_words, key=lambda x: x[1])
+		return all_words
 
-	all_word = []	
-	for i in segment_wor:
-		for j in i:
-			all_word.append(j)
+	all_word = Get_all_words_from_collection(segment_wor)
+	all_word_time = Get_all_words_from_collection(segment_time_wor)
+
 	
-	all_word = sorted(all_word, key=lambda x: x[1])
 
+	def Get_title_from_path_file(full_path):
+		category_name = []
+		for i in full_path:
+			category_name.append(path.splitext(i)[0])
+		return category_name	
 
-	all_word_time = []	
-	for i in segment_time_wor:
-		for j in i:
-			all_word_time.append(j)
-	
-	all_word_time = sorted(all_word_time, key=lambda x: x[1])
-
-
-	category_name = []
-	for i in word_file_name:
-		category_name.append(path.splitext(i)[0])
-
-
-	category_name_time = []
-	for i in word_time_file_name:
-		category_name_time.append(path.splitext(i)[0])
-
-
-	category_name_number = []
-	for i in numb_file_name:
-		category_name_number.append(path.splitext(i)[0])
+	category_name = Get_title_from_path_file(word_file_name)
+	category_name_time = Get_title_from_path_file(word_time_file_name)
+	category_name_number = Get_title_from_path_file(numb_file_name)
 
 
 	return dict(words = (

@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	btn_sub_menu_time = time_block.querySelectorAll('.sub_menu_btn');
 
 	call_nav = document.querySelector('.call_navigation');
-	
+	back_pl = document.querySelector('.back_for_menu');	
 
 
 	btn_self_testing.onclick = function(){
@@ -107,6 +107,11 @@ document.addEventListener('DOMContentLoaded', function(){
 		container.classList.toggle('navigation_active');
 	//	container.style.top = pageYOffset + 'px';
 		call_nav.classList.toggle('call_navigation_after');
+		if (call_nav.classList.contains('call_navigation_after')){
+			back_pl.style.display = 'block';
+		} else {
+			back_pl.style.display = 'none';
+		}
 	}
 
 
