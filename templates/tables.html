@@ -1,0 +1,205 @@
+{% extends "main_page.html" %}
+
+{% block tables %}
+
+<div class="wraper_tables">
+
+<a href="/">
+	<button class='btn_navigation btn_active btn_keyboard_page' value='К словам'> 
+		К словам 
+	</button>
+</a>
+
+<h1> Падежи </h1>
+
+<table class='table__table-padez'>
+
+<tr class='table___header'> <td class="table__padez_title">Падеж</td> <td class="table__padez_title">Вопрос</td> <td class="table__padez_title">После гласной</td> <td class="table__padez_title">После согласной</td> <td class="table__padez_title">Примеры</td> </tr>
+
+<tr> 
+	<td> Основной </td> 
+	<td class='table__cell_question'> Кто? Что? </td>
+	<td class='table__cell_end-word'> 은 </td> 
+	<td class='table__cell_end-word'> 는 </td>
+	<td> 
+		<nobr>선생님<span class="mark_red">은</span> </nobr>; 
+		<nobr>의사<span class="mark_red">는</span>  </nobr>
+	</td>
+</tr> 
+
+<tr> 
+	<td> Именительный </td> 
+	<td class='table__cell_question'> Кто? Что? </td>
+	<td class='table__cell_end-word'> 이 </td> 
+	<td class='table__cell_end-word'> 가 </td>
+	<td>  
+		<nobr>선생님<span class="mark_red">이</span> ; </nobr>
+		<nobr>의사<span class="mark_red">가</span>  </nobr>
+	</td>
+</tr> 
+
+<tr> 
+	<td> Дательный </td> 
+	<td class='table__cell_question'> Когда? Куда? Где? </td>
+	<td colspan="2" class='table__cell_end-word'>  에  </td>
+	<td>  
+		<nobr>학교<span class="mark_red">에</span> 가요 ; </nobr>
+		<nobr>학교<span class="mark_red">에</span> 있어요 </nobr>
+	</td>
+</tr> 
+
+<tr> 
+	<td> Дательный одушевленный </td> 
+	<td class='table__cell_question'> Кому? </td>
+	<td colspan="2" class='table__cell_end-word'>  에게  </td>
+	<td></td>
+</tr> 
+
+<tr> 
+	<td> Дательный  местный </td>
+	<td class='table__cell_question'> Откуда? Где? </td>
+	<td colspan="2" class='table__cell_end-word'>  에서  </td>
+	<td>  
+		<nobr>학교<span class="mark_red">에서</span> 가요 ; </nobr>
+		<nobr>도서관<span class="mark_red">에서</span> 책을 읽어요</nobr> 
+	</td>
+</tr> 
+
+<tr> 
+	<td> Винительный </td> 
+	<td class='table__cell_question'> Кого? Что? </td>
+	<td class='table__cell_end-word'> 을 </td> 
+	<td class='table__cell_end-word'> 를 </td>
+	<td>  
+		<nobr>물<span class="mark_red">을</span> 마셔요 (맛다) ; </nobr>
+		<nobr>우유<span class="mark_red">를</span> 마셔요 </nobr>
+	</td>
+</tr> 
+
+<tr> 
+	<td> Соединительный </td> 
+	<td class='table__cell_question'> </td>
+	<td colspan="2" class='table__cell_end-word'>  하고  </td>
+	<td>  
+		<nobr> 친구<span class="mark_red">하고</span> 어머니 ; </nobr>
+		<nobr> 사과<span class="mark_red">하고</span> 바나나  </nobr>
+	</td>
+</tr>
+
+</table>
+
+
+
+
+<h1> Асимиляция </h1>
+
+<table class='table__table-asim'>
+<tr>
+	<td class="table__asim_title"></td> 
+	<td class="table__asim_title">ㄹ</td> 
+	<td class="table__asim_title">ㅁ</td> 
+	<td class="table__asim_title">ㄴ</td>
+</tr>
+ <tr> 
+ 	<td class="table__asim_title"> ㅁ </td> 
+ 	<td> - </td> 
+ 	<td> - </td> 
+ 	<td> ㄹ • ㄹ </td> 
+ </tr>
+ <tr> 
+ 	<td class="table__asim_title"> ㄹ </td> 
+ 	<td> ㅁ • ㄴ </td> 
+ 	<td> - </td> 
+ 	<td> - </td> 
+ </tr>
+ <tr> 
+ 	<td class="table__asim_title"> ㄴ </td> 
+ 	<td> ㄹ • ㄹ </td> 
+ 	<td> - </td> 
+ 	<td> - </td> 
+ </tr>
+ <tr> 
+ 	<td class="table__asim_title"> ㅇ </td>
+ 	<td> ㅇ • ㄴ </td> 
+ 	<td> - </td> 
+ 	<td> - </td> 
+ </tr>
+ <tr> 
+ 	<td class="table__asim_title"> ㄱ <br>
+ 		<span class="table__asim_additional"> (ㄱ,ㅋ,ㄲ,ㄺ,ㄳ) </span> </td> 
+ 	<td> ㅇ • ㄴ </td>    
+ 	<td> ㅇ • ㅁ </td>
+ 	<td> ㅇ • ㄴ </td>
+ </tr>
+ <tr> 
+ 	<td class="table__asim_title"> ㄷ <br>
+ 		<span class="table__asim_additional"> (ㄷ,ㅌ,ㅈ,ㅊ,ㅅ,ㅆ) </span> </td>     
+ 	<td> ㄴ • ㄴ </td>    
+ 	<td> ㄴ • ㅁ </td>
+ 	<td> ㄴ • ㄴ </td>
+ </tr>
+ <tr> 
+ 	<td class="table__asim_title"> ㅂ <br>
+ 		<span class="table__asim_additional"> (ㅂ,ㅍ,ㄼ,ㅄ) </span> </td>  
+ 	<td> ㅁ • ㄴ </td>    
+ 	<td> ㅁ • ㅁ </td>   
+ 	<td> ㅁ • ㄴ </td>   
+ </tr>
+
+</table>
+
+
+
+
+<h1> Изменение букв в подчиме </h1>
+
+
+
+<table class='table__table-podchim'>
+
+ <tr> 
+ 	<td class="table__podchim_title"> 받짐 </td>  
+ 	<td class="table__podchim_title"> </td>
+ 	<td class="table__podchim_title"> 소리 </td>  
+ </tr>
+ 	<td> ㄱ, ㄲ, ㅋ </td> 
+ 	<td> &gt; </td>
+ 	<td> ㄱ </td>  
+ </tr> 
+ <tr>
+ 	<td> ㄴ </td>   
+ 	<td> &gt; </td>
+ 	<td> ㄴ </td>
+ </tr>
+ <tr>
+ 	<td> ㄷ, ㅅ, ㅆ, ㅈ, ㅊ, ㅌ, ㅎ </td>   
+ 	<td> &gt; </td>
+ 	<td> ㄷ </td>
+ </tr>
+ <tr>
+ 	<td> ㄹ </td>   
+ 	<td> &gt; </td>
+ 	<td> ㄹ </td>
+ </tr>
+ <tr>
+ 	<td> ㅁ </td>   
+ 	<td> &gt; </td>
+ 	<td> ㅁ </td>
+ </tr>
+ <tr>
+ 	<td> ㅂ, ㅍ </td>   
+ 	<td> &gt; </td>
+ 	<td> ㅂ </td>
+ </tr>
+ 	<td> ㅇ </td>   
+ 	<td> &gt; </td>
+ 	<td> ㅇ </td>
+ </tr>
+
+</table>
+
+
+
+</div>
+{% endblock %}
+

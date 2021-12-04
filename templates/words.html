@@ -17,7 +17,10 @@
 		<div class="navigation">
 
 			<a href="/keyboard">
-				<button id='btn_keyword' class='to_keyboard'> Keyboard </button>
+				<button id='btn_keyword' class='to_page'> Keyboard </button>
+			</a>
+			<a href="/tables">
+				<button id='btn_keyword' class='to_page'> Tables  </button>
 			</a>
 
 			<ul class="ul_navigation">
@@ -34,6 +37,14 @@
 									value='Время'> 
 										Время 
 										<sup> {{ words[7]|length }} </sup>
+					</button> 
+				</li>
+
+				<li> 
+					<button class='btn_navigation' 
+									value='Погода'> 
+										Погода 
+										<sup> {{ words[9]|length }} </sup>
 					</button> 
 				</li>
 
@@ -72,13 +83,13 @@
 
 			<ul class='word_list'>
 					<ul class="sub_menu_list">
-							<li class="sub_menu_btn btn_sub_menu_active"> Все время </li>	
+							<li class="sub_menu_time_btn btn_sub_menu_active"> Все время </li>	
 						{% for category_name in words[6] %}
-							<li class="sub_menu_btn" value="{{words[6]|length}}"> {{ category_name }} </li>	
+							<li class="sub_menu_time_btn" value="{{words[6]|length}}"> {{ category_name }} </li>	
 						{% endfor %}
 					</ul>
 
-				<ul class="sub_time_list active_sub_list">
+				<ul class="sub_time_list active_time_sub_list">
 					{% for word in words[7] %} 
 							<li>
 								<span class="korean"> {{ word[0] }} </span>
@@ -98,6 +109,40 @@
 					</ul>
 				{% endfor %} 
 			</ul>
+
+
+
+			<ul class='word_list'>
+					<ul class="sub_menu_list">
+							<li class="sub_menu_weather_btn btn_sub_menu_active"> Вся погода </li>	
+						{% for category_name in words[8] %}
+							<li class="sub_menu_weather_btn" value="{{words[10]|length}}"> {{ category_name }} </li>	
+						{% endfor %}
+					</ul>
+
+				<ul class="sub_weather_list active_weather_sub_list">
+					{% for word in words[9] %} 
+							<li>
+								<span class="korean"> {{ word[0] }} </span>
+								<span class="russian"> {{ word[1] }} </span>
+							</li>
+					{% endfor %}
+				</ul>
+
+				{% for category in words[10] %}
+					<ul class="sub_weather_list">
+						{% for word in category %}
+							<li>
+								<span class="korean"> {{ word[0] }} </span>
+								<span class="russian"> {{ word[1] }} </span>
+							</li>
+						{% endfor %}
+					</ul>
+				{% endfor %} 
+			</ul>
+
+
+
 
 
 			{% for category in words[1] %} 

@@ -1,0 +1,59 @@
+.wraper_tables{
+	width: 80%;
+	margin: 10px auto;
+	overflow-x: scroll;
+}
+
+.table__table-padez,
+.table__table-asim,
+.table__table-podchim{
+	border-collapse: collapse;
+	margin: 30px;
+}
+.table__table-padez tr:nth-child(2n),
+.table__table-asim tr:nth-child(2n),
+.table__table-podchim tr:nth-child(2n) {
+	background-color: #eef8f9;
+}
+.table__table-padez td,
+.table__table-asim td,
+.table__table-podchim td{
+	padding: 5px 7px;
+	border: 1px solid #000;
+}	
+.table___header,
+.table__table-asim td, 
+.table__table-podchim td {
+	text-align: center;
+}
+.table__cell_end-word{
+	width: 100px;
+	text-align: center;
+	font-weight: bold;
+}
+.table__cell_question,
+.table__asim_additional{
+	font-size: 0.7rem;
+}
+.mark_red{
+	font-weight: bold;
+}
+
+.table__padez_title,
+.table__asim_title,
+.table__podchim_title {
+	/*color: #f22;*/
+	font-weight: bold;
+	background-color: #b6dee2;
+}
+.table__asim_title{
+	min-width: 100px;
+}
+
+.table__table-podchim tr td:first-child{
+	text-align: right;
+}
+
+.table__table-podchim .table__podchim_title{
+	text-align: center!important;
+}

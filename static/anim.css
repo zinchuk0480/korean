@@ -1,0 +1,358 @@
+:root{
+--animation-time: 3s ease-in-out infinite;
+}
+
+
+.lala{
+	position: absolute;
+	right: 0;
+	margin: 20px;
+	font-size: 25px;
+	z-index: 1000;
+}
+.posi{
+	position: relative;
+	width:10px;
+}
+.letter_one {
+	animation: letter_one var(--animation-time);
+}
+.letter_two{
+	animation: letter_two var(--animation-time);
+}
+.letter_three{
+	animation: letter_three var(--animation-time);
+}
+.letter_four{
+	animation: letter_four var(--animation-time);
+}
+.letter_five{
+	animation: letter_five var(--animation-time);
+}
+.letter_six{
+	animation: letter_six var(--animation-time);
+}
+.letter_seven{
+	animation: letter_seven var(--animation-time);
+}
+.letter_eigth{
+	animation: letter_eigth var(--animation-time);
+}
+.letter_nine{
+	animation: letter_nine var(--animation-time);
+}
+.letter_ten{
+	animation: letter_ten var(--animation-time);
+}
+.letter_eleven{
+	animation: letter_eleven var(--animation-time);
+}
+.letter_twelve{
+	animation: letter_twelve var(--animation-time);
+}
+.letter_thirteen{
+	animation: letter_thirteen var(--animation-time);
+}
+
+
+.letter_one_kor, 
+.letter_two_kor,
+.letter_three_kor,
+.letter_four_kor,
+.letter_five_kor,
+.letter_six_kor,
+.letter_seven_kor,
+.letter_eigth_kor,
+.letter_nine_kor,
+.letter_ten_kor,
+.letter_eleven_kor,
+.letter_twelve_kor,
+.letter_thirteen_kor{
+	position: absolute;
+	left: -3px;
+	line-height: 2;
+	font-size: 0.7em;
+}
+.letter_one_kor{
+	animation: letter_one_kor var(--animation-time);
+}
+.letter_two_kor{
+	animation: letter_two_kor var(--animation-time);	
+}
+.letter_three_kor{
+	animation: letter_three_kor var(--animation-time);	
+}
+.letter_four_kor{
+	animation: letter_four_kor var(--animation-time);	
+}
+.letter_five_kor{
+	animation: letter_five_kor var(--animation-time);	
+}
+.letter_six_kor{
+	animation: letter_six_kor var(--animation-time);	
+}
+.letter_seven_kor{
+	animation: letter_seven_kor var(--animation-time);	
+}
+.letter_eigth_kor{
+	animation: letter_eigth_kor var(--animation-time);	
+}
+.letter_nine_kor{
+	animation: letter_nine_kor var(--animation-time);	
+}
+.letter_ten_kor{
+	animation: letter_ten_kor var(--animation-time);	
+}
+.letter_eleven_kor{
+	animation: letter_eleven_kor var(--animation-time);	
+}
+.letter_twelve_kor{
+	animation: letter_twelve_kor var(--animation-time);	
+}
+.letter_thirteen_kor{
+	animation: letter_thirteen_kor var(--animation-time);	
+}
+
+
+@keyframes letter_one{
+	0%{opacity: 1;}
+	40%{opacity: 1;}
+	41%{opacity: 0;}
+	60%{opacity: 0;}
+	61%{opacity: 1;}
+	100%{opacity: 1;}
+}
+
+@keyframes letter_one_kor{
+	0%{opacity: 0;}
+	40%{opacity: 0;}
+	41%{opacity: 1;}
+	60%{opacity: 1;}
+	61%{opacity: 0;}
+	100%{opacity: 0;}
+}
+
+
+@keyframes letter_two{
+	0%{opacity: 1;}
+	42%{opacity: 1;}
+	43%{opacity: 0;}
+	62%{opacity: 0;}
+	63%{opacity: 1;}
+	100%{opacity: 1;}
+}
+
+@keyframes letter_two_kor{
+	0%{opacity: 0;}
+	42%{opacity: 0;}
+	43%{opacity: 1;}
+	62%{opacity: 1;}
+	63%{opacity: 0;}
+	100%{opacity: 0;}
+}
+
+@keyframes letter_three{
+	0%{opacity: 1;}
+	45%{opacity: 1;}
+	46%{opacity: 0;}
+	65%{opacity: 0;}
+	66%{opacity: 1;}
+	100%{opacity: 1;}
+}
+
+@keyframes letter_three_kor{
+	0%{opacity: 0;}
+	45%{opacity: 0;}
+	46%{opacity: 1;}
+	65%{opacity: 1;}
+	66%{opacity: 0;}
+	100%{opacity: 0;}
+}
+
+@keyframes letter_four{
+	0%{opacity: 1;}
+	48%{opacity: 1;}
+	49%{opacity: 0;}
+	68%{opacity: 0;}
+	69%{opacity: 1;}
+	100%{opacity: 1;}
+}
+
+@keyframes letter_four_kor{
+	0%{opacity: 0;}
+	48%{opacity: 0;}
+	49%{opacity: 1;}
+	68%{opacity: 1;}
+	69%{opacity: 0;}
+	100%{opacity: 0;}
+}
+
+@keyframes letter_five{
+	0%{opacity: 1;}
+	51%{opacity: 1;}
+	52%{opacity: 0;}
+	71%{opacity: 0;}
+	72%{opacity: 1;}
+	100%{opacity: 1;}
+}
+
+@keyframes letter_five_kor{
+	0%{opacity: 0;}
+	51%{opacity: 0;}
+	52%{opacity: 1;}
+	71%{opacity: 1;}
+	72%{opacity: 0;}
+	100%{opacity: 0;}
+}
+
+@keyframes letter_six{
+	0%{opacity: 1;}
+	54%{opacity: 1;}
+	55%{opacity: 0;}
+	74%{opacity: 0;}
+	75%{opacity: 1;}
+	100%{opacity: 1;}
+}
+
+@keyframes letter_six_kor{
+	0%{opacity: 0;}
+	54%{opacity: 0;}
+	55%{opacity: 1;}
+	74%{opacity: 1;}
+	75%{opacity: 0;}
+	100%{opacity: 0;}
+}
+
+@keyframes letter_seven{
+	0%{opacity: 1;}
+	57%{opacity: 1;}
+	58%{opacity: 0;}
+	77%{opacity: 0;}
+	78%{opacity: 1;}
+	100%{opacity: 1;}
+}
+
+@keyframes letter_seven_kor{
+	0%{opacity: 0;}
+	57%{opacity: 0;}
+	58%{opacity: 1;}
+	77%{opacity: 1;}
+	78%{opacity: 0;}
+	100%{opacity: 0;}
+}
+
+@keyframes letter_eigth{
+	0%{opacity: 1;}
+	60%{opacity: 1;}
+	61%{opacity: 0;}
+	77%{opacity: 0;}
+	81%{opacity: 1;}
+	100%{opacity: 1;}
+}
+
+@keyframes letter_eigth_kor{
+	0%{opacity: 0;}
+	60%{opacity: 0;}
+	61%{opacity: 1;}
+	77%{opacity: 1;}
+	81%{opacity: 0;}
+	100%{opacity: 0;}
+}
+
+@keyframes letter_nine{
+	0%{opacity: 1;}
+	63%{opacity: 1;}
+	64%{opacity: 0;}
+	80%{opacity: 0;}
+	84%{opacity: 1;}
+	100%{opacity: 1;}
+}
+
+@keyframes letter_nine_kor{
+	0%{opacity: 0;}
+	63%{opacity: 0;}
+	64%{opacity: 1;}
+	80%{opacity: 1;}
+	84%{opacity: 0;}
+	100%{opacity: 0;}
+}
+
+@keyframes letter_ten{
+	0%{opacity: 1;}
+	66%{opacity: 1;}
+	67%{opacity: 0;}
+	83%{opacity: 0;}
+	87%{opacity: 1;}
+	100%{opacity: 1;}
+}
+
+@keyframes letter_ten_kor{
+	0%{opacity: 0;}
+	66%{opacity: 0;}
+	67%{opacity: 1;}
+	83%{opacity: 1;}
+	87%{opacity: 0;}
+	100%{opacity: 0;}
+}
+
+@keyframes letter_eleven{
+	0%{opacity: 1;}
+	69%{opacity: 1;}
+	70%{opacity: 0;}
+	86%{opacity: 0;}
+	90%{opacity: 1;}
+	100%{opacity: 1;}
+}
+
+@keyframes letter_eleven_kor{
+	0%{opacity: 0;}
+	69%{opacity: 0;}
+	70%{opacity: 1;}
+	86%{opacity: 1;}
+	90%{opacity: 0;}
+	100%{opacity: 0;}
+}
+
+@keyframes letter_twelve{
+	0%{opacity: 1;}
+	72%{opacity: 1;}
+	73%{opacity: 0;}
+	89%{opacity: 0;}
+	93%{opacity: 1;}
+	100%{opacity: 1;}
+}
+
+@keyframes letter_twelve_kor{
+	0%{opacity: 0;}
+	72%{opacity: 0;}
+	73%{opacity: 1;}
+	89%{opacity: 1;}
+	93%{opacity: 0;}
+	100%{opacity: 0;}
+}
+
+@keyframes letter_thirteen{
+	0%{opacity: 1;}
+	75%{opacity: 1;}
+	76%{opacity: 0;}
+	92%{opacity: 0;}
+	96%{opacity: 1;}
+	100%{opacity: 1;}
+}
+
+@keyframes letter_thirteen_kor{
+	0%{opacity: 0;}
+	75%{opacity: 0;}
+	76%{opacity: 1;}
+	92%{opacity: 1;}
+	96%{opacity: 0;}
+	100%{opacity: 0;}
+}
+
+
+@media screen and (max-width: 600px){
+	.lala{
+		display: none;
+	}
+}
+

@@ -16,6 +16,7 @@ app_dir = path.dirname(__file__)
 words_dir = path.join(app_dir, 'static/words_and_digit/words')
 numbers_dir = path.join(app_dir, 'static/words_and_digit/numbers')
 words_time_dir = path.join(app_dir, 'static/words_and_digit/words_time')
+words_weather_dir = path.join(app_dir, 'static/words_and_digit/words_weather')
 
 
 def Get_name_files(full_path, sort=True):
@@ -29,6 +30,7 @@ def Get_name_files(full_path, sort=True):
 
 word_file_name = Get_name_files(words_dir)
 word_time_file_name = Get_name_files(words_time_dir)
+word_weather_file_name = Get_name_files(words_weather_dir)
 numb_file_name = Get_name_files(numbers_dir)
 
 
@@ -57,9 +59,11 @@ def words_list():
 			segment.append(words_from_file)
 		return segment
 
-	segment_time_wor = Colect_all_word(words_time_dir, word_time_file_name, False) 
-	segment_num = Colect_all_word(numbers_dir, numb_file_name, False, True) 
+
 	segment_wor = Colect_all_word(words_dir, word_file_name)  	
+	segment_time_wor = Colect_all_word(words_time_dir, word_time_file_name, False) 
+	segment_weather_wor = Colect_all_word(words_weather_dir, word_weather_file_name, False) 
+	segment_num = Colect_all_word(numbers_dir, numb_file_name, False, True) 
 
 
 
@@ -74,6 +78,7 @@ def words_list():
 
 	all_word = Get_all_words_from_collection(segment_wor)
 	all_word_time = Get_all_words_from_collection(segment_time_wor)
+	all_word_weather = Get_all_words_from_collection(segment_weather_wor)
 
 	
 
@@ -85,6 +90,7 @@ def words_list():
 
 	category_name = Get_title_from_path_file(word_file_name)
 	category_name_time = Get_title_from_path_file(word_time_file_name)
+	category_name_weather = Get_title_from_path_file(word_weather_file_name)
 	category_name_number = Get_title_from_path_file(numb_file_name)
 
 
@@ -96,7 +102,10 @@ def words_list():
 								category_name_number, 
 								segment_time_wor, 
 								category_name_time, 
-								all_word_time
+								all_word_time,
+								category_name_weather, 
+								all_word_weather,
+								segment_weather_wor 
 							)
 						)
 
