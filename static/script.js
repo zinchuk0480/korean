@@ -4,16 +4,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	word_list = document.querySelectorAll('.word_list');	
 	
-	sub_menu_time_btn = document.querySelectorAll('.sub_menu_time_btn'); // btn_sub_menu
-	sub_time_list = document.querySelectorAll('.sub_time_list'); // sub_list
+	sub_menu_time_btn = document.querySelectorAll('.sub_menu_time_btn'); 
+	sub_time_list = document.querySelectorAll('.sub_time_list');
 
-	sub_menu_weather_btn = document.querySelectorAll('.sub_menu_weather_btn'); // btn_sub_menu
-	sub_weather_list = document.querySelectorAll('.sub_weather_list'); // sub_list
+	sub_menu_weather_btn = document.querySelectorAll('.sub_menu_weather_btn');
+	sub_weather_list = document.querySelectorAll('.sub_weather_list');
 	
-	translation_word = document.querySelectorAll('.russian');
-	words = Array.from(translation_word)
+	translation_words = document.querySelectorAll('.russian');
 
-	btn_self_testing = document.getElementById('btn_opacity');
+	btn_hide_translate = document.getElementById('btn_opacity');
 	container = document.querySelector('.navigation');
 	btn_navigation = container.querySelectorAll('.btn_navigation');
 
@@ -24,19 +23,19 @@ document.addEventListener('DOMContentLoaded', function(){
 	back_pl = document.querySelector('.back_for_menu');	
 
 
-	btn_self_testing.onclick = function(){
-		console.log('click');
-		for (let i = 0; i < words.length; i++){
-			words[i].classList.toggle('opacity_cl');	
-			if (words[i].classList.contains('opacity_cl')){
-				btn_self_testing.innerHTML = 'Return translate';
-				btn_self_testing.style.backgroundColor = '#6f8';
+
+	btn_hide_translate.addEventListener('click', () =>{
+		for (let i = 0; i < translation_words.length; i++){
+			translation_words[i].classList.toggle('opacity_cl');	
+			if (translation_words[i].classList.contains('opacity_cl')){
+				btn_hide_translate.innerHTML = 'Return translate';
+				btn_hide_translate.style.backgroundColor = '#6f8';
 			} else {
-				btn_self_testing.innerHTML = 'Hide translate';
-				btn_self_testing.style.backgroundColor = '#5afa';
+				btn_hide_translate.innerHTML = 'Hide translate';
+				btn_hide_translate.style.backgroundColor = '#5afa';
 			}
 		}
-	}
+	})
 
 	btn_nav = Array.from(btn_navigation)
 	for (let i = 0; i < btn_nav.length; i++){
@@ -65,74 +64,47 @@ document.addEventListener('DOMContentLoaded', function(){
 		}	
 	}
 
-
-
-
+// кнопки времени
 	for (let i = 0; i < sub_menu_time_btn.length; i++){
 		sub_menu_time_btn[i].addEventListener('click', function(){
-			Remove_active_btn_sub_menu();
+			Remove_active_btn_sub_menu(sub_menu_time_btn);
 			this.classList.add('btn_sub_menu_active');
-			Active_list_sub_menu();
-			//active_list = document.querySelectorAll('.list_active > li');	
-			//console.log(this.value);
-			//title_page.innerHTML = this.value + '<sup> ' + active_list.length + ' </sup>';
-			active_time_list_sub = document.querySelectorAll('.active_time_sub_list > li');	
+			Active_list_sub_menu(sub_menu_time_btn, sub_time_list);
+			active_time_list_sub = document.querySelectorAll('.sub_time_list.active_sub_list > li');	
+			console.log('xxx', active_time_list_sub)
 			title_page.innerHTML = 'Время '+ '<sup> ' + active_time_list_sub.length + ' </sup>';
 		});
 	}
-
-	// SUB MENU BTN
-	function Remove_active_btn_sub_menu(){
-		for(let i=0; i < sub_menu_time_btn.length; i++){
-			sub_menu_time_btn[i].classList.remove('btn_sub_menu_active');	
-		}
-	}
-
-	function Active_list_sub_menu(){
-		for(let i = 0; i < sub_time_list.length; i++){
-			sub_time_list[i].classList.remove('active_time_sub_list');
-			if(sub_menu_time_btn[i].classList.contains('btn_sub_menu_active')){
-				sub_time_list[i].classList.add('active_time_sub_list');
-			}
-		}	
-	}
-
-
 
 
 // кнопки погоды
 	for (let i = 0; i < sub_menu_weather_btn.length; i++){
 		sub_menu_weather_btn[i].addEventListener('click', function(){
-			Remove_active_btn_weather_sub_menu();
+			Remove_active_btn_sub_menu(sub_menu_weather_btn);
 			this.classList.add('btn_sub_menu_active');
-			Active_list_weather_sub_menu();
-			//active_list = document.querySelectorAll('.list_active > li');	
-			//console.log(this.value);
-			//title_page.innerHTML = this.value + '<sup> ' + active_list.length + ' </sup>';
-			active_weather_list_sub = document.querySelectorAll('.active_weather_sub_list > li');	
+			Active_list_sub_menu(sub_menu_weather_btn, sub_weather_list);
+			active_weather_list_sub = document.querySelectorAll('.sub_weather_list.active_sub_list > li');	
 			title_page.innerHTML = 'Погода '+ '<sup> ' + active_weather_list_sub.length + ' </sup>';
 		});
 	}
 
+
 	// SUB MENU BTN
-	function Remove_active_btn_weather_sub_menu(){
-		for(let i=0; i < sub_menu_weather_btn.length; i++){
-			sub_menu_weather_btn[i].classList.remove('btn_sub_menu_active');	
+	function Remove_active_btn_sub_menu(sub_menu_btn){
+		for(let i=0; i < sub_menu_btn.length; i++){
+			sub_menu_btn[i].classList.remove('btn_sub_menu_active');	
 		}
 	}
 
-	function Active_list_weather_sub_menu(){
-		for(let i = 0; i < sub_weather_list.length; i++){
-			sub_weather_list[i].classList.remove('active_weather_sub_list');
-			if(sub_menu_weather_btn[i].classList.contains('btn_sub_menu_active')){
-				sub_weather_list[i].classList.add('active_weather_sub_list');
-			}
+	function Active_list_sub_menu(sub_menu_btn, sub_list){
+		for(let i = 0; i < sub_list.length; i++){
+			sub_list[i].classList.remove('active_sub_list');
+			if(sub_menu_btn[i].classList.contains('btn_sub_menu_active')){
+				console.log(sub_list[i])
+				sub_list[i].classList.add('active_sub_list');
+			} 
 		}	
 	}
-
-
-
-
 
 
 
@@ -151,8 +123,6 @@ document.addEventListener('DOMContentLoaded', function(){
 			back_pl.style.display = 'none';
 		}
 	}
-
-
 
 
 	

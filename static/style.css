@@ -114,12 +114,16 @@ li{
 	display: none;
 	width: 100%;
 }
-.active_time_sub_list,
+/*.active_time_sub_list,
 .active_weather_sub_list {
 	display: block;
 	width: 100%;
 }
-
+*/
+.active_sub_list {
+	display: block;
+	width: 100%;
+}
 .numbers{
 	background-color: #c78956f5;
 }
