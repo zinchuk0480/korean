@@ -54,6 +54,7 @@ li{
 	#top: 120px;
 	width: fit-content;
 	width: -moz-fit-content;
+	margin: 0 auto;
 	#transform: translateX(-50%);
 }
 
@@ -207,8 +208,33 @@ li:hover ::before{
 }
 
 
-
-
+.arrow_up{
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	transform: scale(1);
+	margin: 30px;
+	padding: 5px;
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+	background-color: #f00;
+	font-size: 2rem;
+	opacity: 0.5;
+	cursor: pointer;
+	transition: transform .3s, bottom .3s, opacity .3s;
+}
+.arrow_up:hover{
+	transform: scale(1.2);
+	bottom: 3px;
+	opacity: 1;
+}
+.display_arrow{
+	display: block;
+}
 
 @media screen and (max-width: 600px){
 	.top_page{

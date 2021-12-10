@@ -125,5 +125,34 @@ document.addEventListener('DOMContentLoaded', function(){
 	}
 
 
-	
+	list_nav_btn = document.querySelector('.ul_navigation');
+	arrow_up = document.querySelector('.arrow_up');
+	document.addEventListener('wheel', () =>{
+		let scroll_page = pageYOffset;
+		let menu_pos = list_nav_btn.clientHeight;
+		if (scroll_page > menu_pos){
+			arrow_up.classList.add('display_arrow');
+		} else {
+			arrow_up.classList.remove('display_arrow');
+		}
+	})
+
+
+	arrow_up.addEventListener('click', () => {
+		if (pageYOffset > 100){
+			timer = setInterval(ScrollUp, 10)
+		}
+	})	
+
+	function ScrollUp(){
+		if (pageYOffset < 100){
+			clearInterval(timer)
+			arrow_up.classList.remove('display_arrow');
+		} else {
+			window.scrollBy(0, -50)
+		}
+	}
+
+
+
 });

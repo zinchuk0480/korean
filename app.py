@@ -123,5 +123,9 @@ def table():
 def keyboard():
     return render_template('keyboard.html')
 
+@app.route('/rules', methods=['GET'])
+def rules():
+	return render_template('rules.html')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
