@@ -44,10 +44,15 @@ list_keys = {
 
 hanguil_list = {
 	'ㅂ': document.getElementById('key_q'),
+	'ㅃ': document.getElementById('key_q'),
 	'ㅈ': document.getElementById('key_w'),
+	'ㅉ': document.getElementById('key_w'),
 	'ㄷ': document.getElementById('key_e'),
+	'ㄸ': document.getElementById('key_e'),
 	'ㄱ': document.getElementById('key_r'),
+	'ㄲ': document.getElementById('key_r'),
 	'ㅅ': document.getElementById('key_t'),
+	'ㅆ': document.getElementById('key_t'),
 	'ㅛ': document.getElementById('key_y'),
 	'ㅕ': document.getElementById('key_u'),
 	'ㅑ': document.getElementById('key_i'),
@@ -70,11 +75,12 @@ hanguil_list = {
 	'ㅜ': document.getElementById('key_n'),
 	'ㅡ': document.getElementById('key_m'),
 	' ': document.getElementById('key_space'),
-	'ㅖ': document.getElementById('key_shift_left'),
-	'ㅃ': document.getElementById('key_shift_right'),
+	'ShiftLeft': document.getElementById('key_shift_left'),
+	'ShiftRight': document.getElementById('key_shift_right'),
 }
 
-
+const right_shift_symbols = ['ㅃ','ㅉ','ㄸ','ㄲ','ㅆ']
+const left_shift_symbols = ['ㅒ','ㅖ']
 
 string = ['ㄱ','배고픈', '여우',  '한', '마리가',  '포도밭', '옆을', '지나가게', '되었어요']
 for (let i = 0; i < string.length; i++){
@@ -177,6 +183,9 @@ function hlsNextLetter(decompos_tarea){
 	if (letter_word == undefined){
 		hanguil_list[' '].style.backgroundColor = '#00ff04';
 	}	else { 
+		if (right_shift_symbols.includes(letter_word)){
+			hanguil_list['ShiftRight'].style.backgroundColor = '#00ff04';			
+		}
 		hanguil_list[letter_word].style.backgroundColor = '#00ff04';
 	}
 }
