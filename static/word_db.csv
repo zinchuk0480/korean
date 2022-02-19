@@ -1,0 +1,204 @@
+﻿original;translate;base_2;general_thema;main_thema;special_thema;part_of_speech;stage
+가져오다;Брать с собой / Приносить;가져오;action;;;verb;1
+만나다;Встречать;만나;action;;;verb;1
+쬐다;Греться под солнцем;쬐;action;;;verb;1
+산책하다;Гулять;산책하;action;;;verb;1
+질문하세요;Задавайте вопросы;질문하세요;action;;;verb;1
+운동하다;Заниматься спортом;운동하;action;;;verb;1
+전화하다;Звонить по телефону;전화하;action;;;verb;1
+쓰세요;Напишите;쓰세요;action;;;verb;1
+대답하세요;Ответьте на вопросы;대답하세요;action;;;verb;1
+떼다;Отрывать / Отлеплять;떼;action;;;verb;1
+쉬다;Отдыхать;쉬;action;;;verb;1
+마시다;Пить;마시;action;;;verb;1
+따라 하세요;Повторите;따라 하세요;action;;;verb;1
+사다;Покупать;사;action;;;verb;1
+읽으세요;Прочитайте;읽으세요;action;;;verb;1
+일하다;Работать;일하;action;;;verb;1
+깨다;Разбивать;깨;action;;;verb;1
+이야기하다;Разговаривать;이야기하;action;;;verb;1
+잘 들으세요;Слушайте внимательно;잘 들으세요;action;;;verb;1
+듣다;Слушать;듣;action;;;verb;1
+보다;Смотреть;보;action;;;verb;1
+자다;Спать;자;action;;;verb;1
+공부하다;Учиться;공부하;action;;;verb;1
+읽다;Читать;읽;action;;;verb;1
+아프다;Болеть;아프;action;;;verb;1
+침대;Кровать;침대;furniture;;;noun;1
+베개;Подушка;베개;furniture;;;noun;1
+책상;Стол;책상;furniture;;;noun;1
+의자;Стул;의자;furniture;;;noun;1
+교실;Аудитория, Класс;교실;place;;;noun;1
+도서관;Библиотека;도서관;place;;;noun;1
+병원;Больница;병원;place;;;noun;1
+근처;В окрестностях;근처;place;;;noun;1
+집;Дом;집;place;;;noun;1
+노래방;Караоке;노래방;place;;;noun;1
+카페;Кафе;카페;place;;;noun;1
+영화관;Кинотеатр;영화관;place;;;noun;1
+방;Комната;방;place;;;noun;1
+가게;Магазин;가게;place;;;noun;1
+고향;Родина, родной город;고향;place;;;noun;1
+백화점;Универмаг;백화점;place;;;noun;1
+시내;Центр города;시내;place;;;noun;1
+층;Этаж;층;place;;;noun;1
+강의실;Аудитория, Лекционный зал;강의실;place;;;noun;1
+바지;Брюки;바지;clothes;;;noun;1
+모자;Кепка / шапка;모자;clothes;;;noun;1
+옷;Одежда;옷;clothes;;;noun;1
+두꺼운 옷;Теплая одежда;두꺼운 옷;clothes;;;noun;1
+구두;Туфли;구두;clothes;;;noun;1
+수첩;Ежедневник;수첩;items;;;noun;1
+책;Книга;책;items;;;noun;1
+펜;Ручка;펜;items;;;noun;1
+가방;Сумка;가방;items;;;noun;1
+텔레빋전;Телевизор;텔레빋전;items;;;noun;1
+그림;Рисунок, картина;그림;items;;;noun;1
+컴퓨터;Компьютер;컴퓨터;items;;;noun;1
+신문;Газета;신문;items;;;noun;1
+연필;Карандаш;연필;items;;;noun;1
+지우개;Ластик;지우개;items;;;noun;1
+오렌지;Апельсин;오렌지;products;;;noun;1
+수박;Арбуз;수박;products;;;noun;1
+포도;Виноград;포도;products;;;noun;1
+물;Вода;물;products;;;noun;1
+밥;Еда Рис готовый;밥;products;;;noun;1
+불고기;Жареное мясо;불고기;products;;;noun;1
+우유;Молоко;우유;products;;;noun;1
+야채;Овощи;야채;products;;;noun;1
+주스;Сок;주스;products;;;noun;1
+빵;Хлеб;빵;products;;;noun;1
+사과;Яблоко;사과;products;;;noun;1
+안;Внутри;안;location;;;adverb;1
+뒤;За;뒤;location;;;adverb;1
+위;На / Сверху;위;location;;;adverb;1
+앞;Перед;앞;location;;;adverb;1
+아래;Под;아래;location;;;adverb;1
+옆;Сбоку;옆;location;;;adverb;1
+밖;Снаружи;밖;location;;;adverb;1
+밑;Снизу;밑;location;;;adverb;1
+여기;Здесь;여기;another;;;adverb;1
+어디;Где?;어디;another;;;adverb;1
+그리거;Также / Кроме того;그리거;union;;;adverb;1
+그래서;По этому / потому что;그래서;union;;;adverb;1
+그러면;Тогда / В таком случае;그러면;union;;;adverb;1
+반갑다;Быть радостным;반갑;another;;;verb;1
+제;Мой;;another;;;adverb;2
+알겠어요?;Вам понятно?;알겠어요?;another;;;verb;1
+같이;Вместе;같이;another;;;adverb;1
+저분;Вон тот человек;저분;another;;;;1
+모두;Все Итого;모두;another;;;adverb;1
+눈;Глаз;눈;another;;;noun;1
+주다;Дайте;주;another;;;verb;1
+나무;Дерево;나무;another;;;noun;1
+싸다;Дешевый;싸;another;;;adjective;1
+친구;Друг;친구;another;;;noun;1
+먹다;Есть;먹;another;;;verb;1
+질문 있어요?;Есть у вас вопросы?;질문 있어요?;another;;;noun;1
+밤;Желудь;밤;another;;;noun;1
+안녱하세요?;Здраствуйте;안녱하세요?;another;;;verb;1
+미안니하다;Извините;미안니하;another;;;verb;1
+죄송합니다;Извините привлечь внимание;죄송합니;another;;;verb;1
+영화;Кино;영화;another;;;noun;1
+중국어;Китайский язык;중국어;another;;;noun;1
+배;Корабль;배;another;;;noun;1
+한국어;Корейский язык;한국어;another;;;noun;1
+달;Луна;달;another;;;noun;1
+음악;Музыка;음악;another;;;noun;1
+우리;Мы;우리;another;;;noun;1
+코;Нос;코;another;;;noun;1
+좋아하다;Нравится;좋아하;another;;;verb;1
+책을 펴세요;Откройте книгу;책을 펴세요;another;;;verb;1
+약속;Обещание;약속;another;;;noun;1
+잭을 보세요;Посмотрите в книгу;잭을 보세요;another;;;verb;1
+물건;Предметы;물건;another;;;noun;1
+새다;Протекать;새;another;;;verb;1
+로;При помощи чего;로;another;;;;1
+몇;Сколько;몇;another;;;pronoun;1
+얼마나;Сколько количество;얼마나;another;;;pronoun;1
+얼마에요?;Сколько стоит;얼마에요?;another;;;pronoun;1
+고맙습니다;Спасибо;고맙습니;another;;;noun;1
+감사합니다;Спасибо;감사합니;another;;;noun;1
+안녕히 계세요;Счастливо оставаться;안녕히 계세요;another;;;adverb;1
+안녕히 가세요;Счастливого пути;안녕히 가세요;another;;;adverb;1
+그분;Тот человек;그분;another;;;adjective;1
+무엇을 드릴까요?;Чем могу помочь?;무엇을 드릴까요?;another;;;verb;1
+뭐 해요?;Что делаете?;뭐 해요?;another;;;verb;1
+무엇;Что?;무엇;another;;;noun;1
+이분;Этот человек;이분;another;;;adjective;1
+괜찮다;Нормальный;괜찮;another;;;adjective;1
+수업;Урок;수업;another;;;noun;1
+회의;Собрание;회의;another;;;noun;1
+정말;Действительно;정말;another;;;adverb;1
+시험;Экзамен;시험;another;;;noun;1
+왜;Почему? Зачем?;왜;another;;;;1
+많이;Много;많이;another;;;adverb;1
+재미있다;Интересный;재미있;another;;;adjective;1
+어렵다;Сложный, трудный;어렵;another;;;adjective;1
+이유;Причина;이유;another;;;noun;1
+배우다;Изучать;배우;another;;;verb;1
+지난;Прошлый, прошедший;지난;another;;;adjective;1
+이주;Очень;이주;another;;;adverb;1
+쉽다;Легкий;쉽;another;;;adjective;1
+말하기;Разговор;말하기;another;;;noun;1
+노래;Песня;노래;another;;;noun;1
+시작라다;Начинать;시작라;another;;;verb;1
+잘하다;Уметь хорошо что-то делать;잘하;another;;;verb;1
+월;Понедельник (сокр.);월;time;weeks;;noun;1
+화;Вторник (сокр.);화;time;weeks;;noun;1
+수;Среда (сокр.);수;time;weeks;;noun;1
+목;Четверг (сокр.);목;time;weeks;;noun;1
+금;Пятница (сокр.);금;time;weeks;;noun;1
+토;Суббота (сокр.);토;time;weeks;;noun;1
+일;Воскресенье (сокр.);일;time;weeks;;noun;1
+요일;День недели;요일;time;weeks;;noun;1
+무스요일;Какой день недели;무스요일;time;weeks;;noun;1
+이번 주;Эта неделя;이번 주;time;weeks;;noun;1
+지난 주;Прошлая неделя;지난 주;time;weeks;;noun;1
+주말;Выходные (конец недели);주말;time;weeks;;noun;1
+이번 주말;Эти выходные;이번 주말;time;weeks;;noun;1
+지난 주말;Прошлые выходные;지난 주말;time;weeks;;noun;1
+보내다;Проводить (время);보내;time;;;verb;2
+요즘;В последнее время;요즘;time;;;pronoun;1
+어제;Вчера;어제;time;days;;pronoun;1
+오늘;Сегодня;오늘;time;days;;pronoun;1
+지금;Сейчас;지금;time;;;pronoun;1
+작년;Прошлый год;작년;time;years;;adjective;1
+시간;Время;시간;time;;;noun;1
+월;Месяц;월;time;months;;noun;1
+언제;Когда;언제;time;;;pronoun;1
+지나다;Проходить;지나;time;;;verb;1
+며칠;Какое число (дата);며칠;time;days;;adjective;1
+봄;Весна;봄;time;seasons;wheather;noun;1
+여름;Лето;여름;time;seasons;wheather;noun;1
+가을;Осень;가을;time;seasons;wheather;noun;1
+겨울;Зима;겨울;time;seasons;wheather;noun;1
+눈이;Снег;눈이;wheather;;;noun;1
+비가;Дождь;비가;wheather;;;noun;1
+흐려요;Пасмурно;흐려요;wheather;;;noun;1
+날씨가 어때요?;Какая погода?;날씨가 어때요?;wheather;;;adjective;1
+덥다;Жарко;덥;wheather;;;pronoun;1
+따뜻하다;Тепло;따뜻하;wheather;;;pronoun;1
+시원하다;Прохладно/Свежо;시원하;wheather;;;pronoun;1
+춥다;Холодно;춥;wheather;;;pronoun;1
+안부;Приветствие;안부;another;;;noun;2
+지내다;Поживать;지내;another;;;verb;2
+휴가;Отпуск;휴가;another;;;noun;2
+힘들다;Тяжелый/Сложный;힘들;another;;;adjective;2
+재미있다;Интересный;재미있;another;;;adjective;2
+재미없다;Неинтересный;재미없;another;;;adjective;2
+바쁘다;Занят;바쁘;another;;;adverb;2
+즐겁다;Радостный;즐겁;another;;;adjective;2
+그저그렇다 / 그렇다;Так себе;그래;another;;;adverb;2
+비곤하다;Быть уставшим;비곤하;another;;;adjective;2
+자전거;Велосипед;자전거;transport;;;noun;2
+언제나;Когда бы то ни было;;time;;;adverb;2
+항상;Всегда;;time;;;adverb;2
+가끔;Редко;;time;;;adverb;2
+거의;Почти;;time;;;adverb;2
+자주;Часто;;time;;;adverb;2
+별로;Совсем;;another;;;adverb;2
+전혀;Не совсем / почти;;another;;;adverb;2
+피곤하다;Уставать;피곤하;action;;;verb;2
+많다;Многочисленный;마나;another;;;adjective;2
+그렇다;Так себе;그렇;another;;;adverb;3
