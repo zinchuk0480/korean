@@ -4,6 +4,7 @@ from flask import Flask, render_template, redirect, url_for, request, session
 from flask_login import LoginManager, current_user, login_required, login_user
 #from werkzeug.utils import secure_filename
 #from werkzeug.security import check_password_hash, generate_passwoed_hash
+from model import query_words
 
 
 app = Flask(__name__)
@@ -126,6 +127,20 @@ def keyboard():
 @app.route('/rules', methods=['GET'])
 def rules():
 	return render_template('rules.html')
+
+
+
+
+@app.context_processor
+def all_json():
+    def get_json():
+        data = query_words()
+        return data
+    return dict(jso = get_json())
+
+
+
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
