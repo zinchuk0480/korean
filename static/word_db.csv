@@ -158,16 +158,16 @@
 주말;Выходные (конец недели);주말;time;weeks;;noun;1
 이번 주말;Эти выходные;이번 주말;time;weeks;;noun;1
 지난 주말;Прошлые выходные;지난 주말;time;weeks;;noun;1
-보내다;Проводить (время);보내;time;;;verb;2
-요즘;В последнее время;요즘;time;;;pronoun;1
+보내다;Проводить (время);보내;time;relation;;verb;2
+요즘;В последнее время;요즘;time;relation;;pronoun;1
 어제;Вчера;어제;time;days;;pronoun;1
 오늘;Сегодня;오늘;time;days;;pronoun;1
-지금;Сейчас;지금;time;;;pronoun;1
+지금;Сейчас;지금;time;relation;;pronoun;1
 작년;Прошлый год;작년;time;years;;adjective;1
-시간;Время;시간;time;;;noun;1
+시간;Время;시간;time;relation;;noun;1
 월;Месяц;월;time;months;;noun;1
-언제;Когда;언제;time;;;pronoun;1
-지나다;Проходить;지나;time;;;verb;1
+언제;Когда;언제;time;relation;;pronoun;1
+지나다;Проходить;지나;time;relation;;verb;1
 며칠;Какое число (дата);며칠;time;days;;adjective;1
 봄;Весна;봄;time;seasons;wheather;noun;1
 여름;Лето;여름;time;seasons;wheather;noun;1
@@ -192,13 +192,22 @@
 그저그렇다 / 그렇다;Так себе;그래;another;;;adverb;2
 비곤하다;Быть уставшим;비곤하;another;;;adjective;2
 자전거;Велосипед;자전거;transport;;;noun;2
-언제나;Когда бы то ни было;;time;;;adverb;2
-항상;Всегда;;time;;;adverb;2
-가끔;Редко;;time;;;adverb;2
-거의;Почти;;time;;;adverb;2
-자주;Часто;;time;;;adverb;2
+언제나;Когда бы то ни было;;time;relation;;adverb;2
+항상;Всегда;;time;times;;adverb;2
+가끔;Редко;;time;times;;adverb;2
+거의;Почти;;time;times;;adverb;2
+자주;Часто;;time;times;;adverb;2
 별로;Совсем;;another;;;adverb;2
 전혀;Не совсем / почти;;another;;;adverb;2
 피곤하다;Уставать;피곤하;action;;;verb;2
 많다;Многочисленный;마나;another;;;adjective;2
-그렇다;Так себе;그렇;another;;;adverb;3
+그렇다;Так себе;그렇;another;;;adverb;2
+비빔밥;Пибимбап (Рис, яйцо, ростки);;products;;;noun;2
+설렁탕;Суп из говядины;;products;;;noun;2
+삼계탕;Суп куриный;;products;;;noun;2
+갈비;Жареные ребрышки;;products;;;noun;2
+기치찌개;Суп кимчи острый;;products;;;noun;2
+된장찌개;Суп соевый;;products;;;noun;2
+냉면;Лапша холодная;;products;;;noun;2
+김밥;Кимбап (ролы);;products;;;noun;2
+라면;Лапша рамен;;products;;;noun;2
