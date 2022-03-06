@@ -13,8 +13,10 @@
 
 	<div class="container">
 
-{% for i in jso %}
-{{ i.words, i.translate }}
+{% for ts in jso_time_sub_menu %}
+	
+{{	ts.main_thema }}
+
 {% endfor %}
 
 		<div class="back_for_menu"> </div>
@@ -82,10 +84,10 @@
 		</div>
 		
 			<ul class='word_list list_active'>
-				{% for word in words[0] %}
+				{% for word in jso %}
 					<li>
-						<span class="korean"> {{ word[0] }} </span>
-						<span class="russian"> {{ word[1] }} </span>
+						<span class="korean"> {{ word.words }} </span>
+						<span class="russian"> {{ word.translate }} </span>
 					</li>
 				{% endfor %}
 			</ul> 
@@ -166,16 +168,32 @@
 				</ul>
 			{% endfor %}
 
-			{% for category in words[3] %} 
 				<ul class='word_list'>
-					{% for word in category %}
+					{% for dig in jso_chine_digits %}
 						<li>
-							<span class="korean"> {{ word[0] }} </span>
-							<span class="russian"> {{ word[1] }} </span>
+							<span class="korean"> {{ dig.original }} </span>
+							<span class="russian"> {{ dig.translate }} </span>
 						</li>
 					{% endfor %}
 				</ul>
-			{% endfor %}
+
+				<ul class='word_list'>
+					{% for dig in jso_korean_digits %}
+						<li>
+							<span class="korean"> {{ dig.original }} </span>
+							<span class="russian"> {{ dig.translate }} </span>
+						</li>
+					{% endfor %}
+				</ul>
+
+				<ul class='word_list'>
+					{% for dig in jso_count_words %}
+						<li>
+							<span class="korean"> {{ dig.original }} </span>
+							<span class="russian"> {{ dig.translate }} </span>
+						</li>
+					{% endfor %}
+				</ul>
 
 
 		<div class='call_navigation'> </div>

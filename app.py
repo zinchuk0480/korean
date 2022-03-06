@@ -4,7 +4,12 @@ from flask import Flask, render_template, redirect, url_for, request, session
 from flask_login import LoginManager, current_user, login_required, login_user
 #from werkzeug.utils import secure_filename
 #from werkzeug.security import check_password_hash, generate_passwoed_hash
+
 from model import query_words
+from model import query_count_words
+from model import query_chine_digits
+from model import query_korean_digits
+from model import query_time_sub_menu
 
 
 app = Flask(__name__)
@@ -130,6 +135,7 @@ def rules():
 
 
 
+# WORDS FROM TABLE
 
 @app.context_processor
 def all_json():
@@ -138,9 +144,33 @@ def all_json():
         return data
     return dict(jso = get_json())
 
+@app.context_processor
+def digit_chine_json():
+    def get_json():
+        data = query_chine_digits()
+        return data
+    return dict(jso_chine_digits = get_json())
 
+@app.context_processor
+def digit_korean_json():
+    def get_json():
+        data = query_korean_digits()
+        return data
+    return dict(jso_korean_digits = get_json())
 
+@app.context_processor
+def count_words_json():
+    def get_json():
+        data = query_count_words()
+        return data
+    return dict(jso_count_words = get_json())
 
+@app.context_processor
+def time_sub_words_json():
+    def get_json():
+        data = query_time_sub_menu()
+        return data
+    return dict(jso_time_sub_menu = get_json())
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
