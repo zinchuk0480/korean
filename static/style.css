@@ -181,11 +181,11 @@ li:hover .opacity_cl{
 	transition: flex .3s;
 }
 
-li:hover, li:nth-child(2n):hover{
+.word_list li:hover, .word_list li:nth-child(2n):hover{
 	background-color: rgba(117,255,177,.3);
 	transition: background-color .2s;
 }
-li:hover ::before{
+.word_list li:hover ::before{
 	flex: 0.3 0 auto;
 }
 

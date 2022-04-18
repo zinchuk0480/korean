@@ -3,21 +3,21 @@
 {% block words %}
 	<div class='top_page'>
 
+	{% set count = namespace(value=0) %}
+	{% for i in jso.values() %}
+		{% for j in i %}
+			{% set count.value = count.value + 1 %}
+		{% endfor %}
+	{% endfor %}
+
+	
 		<h1 class='title_page'> 
 			Все слова 
-			<sup class="title_page_sup"> {{ words[0]|length }} </sup> 
+			<sup class="title_page_sup"> {{ count.value }} </sup> 
 		</h1>  
 		<button id='btn_opacity' class='btn_navigation'> Hide translate </button>
 	</div>
-
-
 	<div class="container">
-
-{% for ts in jso_time_sub_menu %}
-	
-{{	ts.main_thema }}
-
-{% endfor %}
 
 		<div class="back_for_menu"> </div>
 		<div class="navigation">
@@ -33,167 +33,43 @@
 			</a>
 
 			<ul class="ul_navigation">
-				<li> 
-					<button class='btn_navigation btn_active' 
-									value='Все слова'> 
-										Все слова 
-										<sup> {{ words[0]|length }} </sup>
-					</button> 
+				<li>
+						<button class='btn_navigation btn_active' value='Все'> 
+							Все	
+						</button>
 				</li>
-
-				<li> 
-					<button class='btn_navigation' 
-									value='Время'> 
-										Время 
-										<sup> {{ words[7]|length }} </sup>
-					</button> 
-				</li>
-
-				<li> 
-					<button class='btn_navigation' 
-									value='Погода'> 
-										Погода 
-										<sup> {{ words[9]|length }} </sup>
-					</button> 
-				</li>
-
-				{% for i in range(words[2]|length) %}
-					<li> 
-						<button class='btn_navigation' 
-										value="{{ words[2][i] }}"> 
-											{{ words[2][i] }} 
-											<sup> {{ words[1][i]|length }} </sup>
-						</button> 
-					</li>
-				{% endfor %}	
-
-				{% for i in range(words[4]|length) %}
-					<li> 
-						<button class='btn_navigation numbers' 
-										value="{{ words[4][i] }}"> 
-											{{ words[4][i] }} 
-											<sup> {{ words[4][i]|length }} </sup>
-						</button> 
-					</li>
-				{% endfor %}	
-
-			</ul>
-
-		<div class="arrow_up">&#8593;</div>
-
-		</div>
-		
-			<ul class='word_list list_active'>
-				{% for word in jso %}
-					<li>
-						<span class="korean"> {{ word.words }} </span>
-						<span class="russian"> {{ word.translate }} </span>
+				{% for key, value in jso.items() %}
+					<li class="list_menu">
+						<button class='btn_navigation' value={{ value[0]['general_thema_ru'] }}> 
+							{{ value[0]['general_thema_ru'] }}
+						</button>
 					</li>
 				{% endfor %}
-			</ul> 
-
-
-			<ul class='word_list'>
-					<ul class="sub_menu_list">
-							<li class="sub_menu_time_btn btn_sub_menu_active"> Все время </li>	
-						{% for category_name in words[6] %}
-							<li class="sub_menu_time_btn" value="{{words[6]|length}}"> {{ category_name }} </li>	
-						{% endfor %}
-					</ul>
-
-				<ul class="sub_time_list active_sub_list">
-					{% for word in words[7] %} 
-							<li>
-								<span class="korean"> {{ word[0] }} </span>
-								<span class="russian"> {{ word[1] }} </span>
-							</li>
-					{% endfor %}
-				</ul>
-
-				{% for category in words[5] %}
-					<ul class="sub_time_list">
-						{% for word in category %}
-							<li>
-								<span class="korean"> {{ word[0] }} </span>
-								<span class="russian"> {{ word[1] }} </span>
-							</li>
-						{% endfor %}
-					</ul>
-				{% endfor %} 
 			</ul>
 
+		</div>
 
-
-			<ul class='word_list'>
-					<ul class="sub_menu_list">
-							<li class="sub_menu_weather_btn btn_sub_menu_active"> Вся погода </li>	
-						{% for category_name in words[8] %}
-							<li class="sub_menu_weather_btn" value="{{words[10]|length}}"> {{ category_name }} </li>	
-						{% endfor %}
-					</ul>
-
-				<ul class="sub_weather_list active_sub_list">
-					{% for word in words[9] %} 
-							<li>
-								<span class="korean"> {{ word[0] }} </span>
-								<span class="russian"> {{ word[1] }} </span>
-							</li>
-					{% endfor %}
-				</ul>
-
-				{% for category in words[10] %}
-					<ul class="sub_weather_list">
-						{% for word in category %}
-							<li>
-								<span class="korean"> {{ word[0] }} </span>
-								<span class="russian"> {{ word[1] }} </span>
-							</li>
-						{% endfor %}
-					</ul>
-				{% endfor %} 
-			</ul>
-
-
-
-
-
-			{% for category in words[1] %} 
-				<ul class='word_list'>
-					{% for word in category %}
+			<ul class='word_list list_active'>
+				{% for key, val in jso.items() %}
+					{% for word in val %}
 						<li>
-							<span class="korean"> {{ word[0] }} </span>
-							<span class="russian"> {{ word[1] }} </span>
+							<span class="korean"> {{ word.original }} </span>
+							<span class="russian"> {{ word.translate }} </span>
 						</li>
 					{% endfor %}
-				</ul>
 			{% endfor %}
+			</ul>
 
-				<ul class='word_list'>
-					{% for dig in jso_chine_digits %}
+			{% for key, val in jso.items() %}
+			<ul class='word_list'>
+					{% for word in val %}
 						<li>
-							<span class="korean"> {{ dig.original }} </span>
-							<span class="russian"> {{ dig.translate }} </span>
+							<span class="korean"> {{ word.original }} </span>
+							<span class="russian"> {{ word.translate }} </span>
 						</li>
 					{% endfor %}
-				</ul>
-
-				<ul class='word_list'>
-					{% for dig in jso_korean_digits %}
-						<li>
-							<span class="korean"> {{ dig.original }} </span>
-							<span class="russian"> {{ dig.translate }} </span>
-						</li>
-					{% endfor %}
-				</ul>
-
-				<ul class='word_list'>
-					{% for dig in jso_count_words %}
-						<li>
-							<span class="korean"> {{ dig.original }} </span>
-							<span class="russian"> {{ dig.translate }} </span>
-						</li>
-					{% endfor %}
-				</ul>
+			</ul>
+			{% endfor %}
 
 
 		<div class='call_navigation'> </div>

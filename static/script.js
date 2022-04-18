@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	btn_navigation = container.querySelectorAll('.btn_navigation');
 
 	time_block = document.querySelector('.sub_menu_list');
-	btn_sub_menu_time = time_block.querySelectorAll('.sub_menu_time_btn');
+	//btn_sub_menu_time = time_block.querySelectorAll('.sub_menu_time_btn');
 
 	call_nav = document.querySelector('.call_navigation');
 	back_pl = document.querySelector('.back_for_menu');	

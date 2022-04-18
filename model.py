@@ -24,59 +24,91 @@ db = PostgresqlDatabase(
 )
 
 class Korean_words(Model, UserMixin):
-	id = IntegerField()
-	words = TextField()
+	original = TextField(primary_key=True)
 	translate = TextField()
 	base_2 = TextField()
-	general_thema = TextField()
-	main_thema = TextField()
-	special_thema = TextField()
+	general_thema_en = TextField()
+	general_thema_ru = TextField()
+	main_thema_en = TextField()
+	main_thema_ru = TextField()
+	special_thema_en = TextField()
+	special_thema_ru = TextField()
 	part_of_speech = TextField()
-	stage = TextField()
+	stage = IntegerField()
+	lesson = IntegerField()
+	text_type = TextField()
 	class Meta:
 		db_table = 'words'
 		database = db
 
-class Count_words(Model, UserMixin):
-	id = IntegerField()
-	original = TextField()
-	translate = TextField()
-	base_2 = TextField()
-	general_thema = TextField()
-	main_thema = TextField()
-	special_thema = TextField()
-	part_of_speech = TextField()
-	stage = TextField()
-	class Meta:
-		db_table = 'count'
-		database = db
+#class Count_words(Model, UserMixin):
+#	id = IntegerField()
+#	original = TextField()
+#	translate = TextField()
+#	base_2 = TextField()
+#	general_thema = TextField()
+#	main_thema = TextField()
+#	special_thema = TextField()
+#	part_of_speech = TextField()
+#	stage = TextField()
+#	class Meta:
+#		db_table = 'count'
+#		database = db
 
 db.connect
 
 def query_words():
-	get_data =  Korean_words.select().order_by(Korean_words.translate)
+	get_data = Korean_words.select().order_by(Korean_words.general_thema_ru)
 	data_to_json = [model_to_dict(data) for data in get_data]
-	print(data_to_json)
-	return data_to_json
 
-def query_chine_digits():
-	get_data = Count_words.select().where(Count_words.main_thema=="chine_digits")
-	data_to_json = [model_to_dict(data) for data in get_data]
-	return data_to_json
+	ready_data_json = []
+	for i in data_to_json:
+		ready_data_json.append(i['general_thema_en']) 
 
-def query_korean_digits():
-	get_data =  Count_words.select().where(Count_words.main_thema=="korean_digits")
-	data_to_json = [model_to_dict(data) for data in get_data]
-	return data_to_json
+	obj = {}
+	for i in ready_data_json:
+		obj.setdefault(i, [])
 
-def query_count_words():
-	get_data =  Count_words.select().where(Count_words.general_thema=="count_words").order_by(Count_words.translate)
-	data_to_json = [model_to_dict(data) for data in get_data]
-	return data_to_json
+	for i in data_to_json:
+		for key, val in obj.items():
+			if key == i['general_thema_en']:
+				obj[key].append(i)
+	#category = []
+	#n = 0
+	#while n < len(data_to_json):
+	#	if n+1 == len(data_to_json):
+	#		category.append(data_to_json[n])
+	#		ready_data_json.append(category)
+	#		break
+	#	elif data_to_json[n]['general_thema_en'] == data_to_json[n+1]['general_thema_en']:
+	#		category.append(data_to_json[n])
+	#	else:
+	#		category.append(data_to_json[n])
+	#		ready_data_json.append(category)
+	#		category = []
+	#	n+=1
+	print("DATA ", obj, '\n')
+	return obj 
 
 
-def query_time_sub_menu():
-	get_data = Korean_words.select().where(Korean_words.general_thema=="time", Korean_words.main_thema!="")
+#def query_chine_digits():
+#	get_data = Count_words.select().where(Count_words.main_thema=="chine_digits")
+#	data_to_json = [model_to_dict(data) for data in get_data]
+#	return data_to_json
+#
+#def query_korean_digits():
+#	get_data =  Count_words.select().where(Count_words.main_thema=="korean_digits")
+#	data_to_json = [model_to_dict(data) for data in get_data]
+#	return data_to_json
+#
+#def query_count_words():
+#	get_data =  Count_words.select().where(Count_words.general_thema=="count_words").order_by(Count_words.translate)
+#	data_to_json = [model_to_dict(data) for data in get_data]
+#	return data_to_json
+#
+#
+#def query_time_sub_menu():
+#	get_data = Korean_words.select().where(Korean_words.general_thema=="time", Korean_words.main_thema!="")
 
 #	temp_thema = ''
 #	temp_array = []
@@ -92,6 +124,6 @@ def query_time_sub_menu():
 #			time_array.append(temp_array)
 #			temp_array = []	
 #			temp_thema = ''
-	print(get_data)			
-	data_to_json = [model_to_dict(data) for data in get_data]
+#	print(get_data)			
+#	data_to_json = [model_to_dict(data) for data in get_data]
 	return data_to_json
