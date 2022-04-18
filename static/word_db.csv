@@ -228,12 +228,12 @@
 쓰다;Горький;;products;продукты;taste;вкус;;;adjective;2;3;words
 짜다;Соленый;;products;продукты;taste;вкус;;;adjective;2;3;words
 시다;Кислый;;products;продукты;taste;вкус;;;adjective;2;3;words
-이;Этот;;;;;;;;adjective;2;3;words
-다;Всё;;;;;;;;;2;3;words
+이;Этот;;annother;другое;;;;;adjective;2;3;words
+다;Всё;;annother;другое;;;;;;2;3;words
 팔다;Подавать;;action;действие;;;;;verb;2;3;words
 여러분;Вы / Ребята;;people;люди;;;;;noun;2;3;words
 아주머니;Тетушка;;people;люди;;;;;noun;2;3;words
-인기가 있다;Популярный;;;;;;;;adjective;2;3;words
+인기가 있다;Популярный;;people;люди;;;;;adjective;2;3;words
 소개하다;Знакомить;;action;действие;;;;;verb;2;3;words
 반찬;Закуска;;products;продукты;;;;;noun;2;3;words
 버스;Автобус;;transport;транспорт;;;;;noun;2;4;words
@@ -242,7 +242,7 @@
 비행기;Самолет;;transport;транспорт;;;;;noun;2;4;words
 자전거;Велосипед;;transport;транспорт;;;;;noun;2;4;words
 지하철;Метро;;transport;транспорт;;;;;noun;2;4;words
-어떻게;Как;;;;;;;;;2;4;words
+어떻게;Как;;annother;другое;;;;;;2;4;words
 하루;День;;time;время;;;;;noun;2;4;words
 한국문화원;Корейский культурный центр;;place;место;;;;;noun;2;4;words
 번;номер / количество раз;;counter;счетные;;;;;noun;2;4;words
@@ -250,9 +250,9 @@
 생신;День рождения;;time;время;;;;;noun;2;4;words
 도시;Город;;place;место;;;;;noun;2;4;words
 걸어오다;Куда-то приходить;;action;действие;;;;;verb;2;4;words
-어느;Какой из?;;;;;;;;adjective;2;4;words
+어느;Какой из?;;annother;другое;;;;;adjective;2;4;words
 산;гора;;place;место;;;;;noun;2;4;words
-먼저;Сперва / Сначала;;;;;;;;adverb;2;4;words
+먼저;Сперва / Сначала;;annother;другое;;;;;adverb;2;4;words
 걸어가다;Куда-то идти;;action;действие;;;;;verb;2;4;words
 어머니;Мама;;people;люди;family;семья;;;noun;2;4;words
 오른쭉;С правой стороны;;location;расположение;side;сторона;;;adverb;2;5;words
@@ -373,3 +373,39 @@
 곳;место;;place;место;;;;;noun;2;9;words
 드라마;сериал;;another;другое;;;;;noun;2;9;words
 관심;интерес;;another;другое;;;;;noun;2;9;words
+건강;здоровье;;condition;состояние;;;;;noun;2;10;words
+머리;голово (волосы);;people;люди;body_parts;части тела;;;noun;2;10;words
+귀;уши;;people;люди;body_parts;части тела;;;noun;2;10;words
+다리;ноги;;people;люди;body_parts;части тела;;;noun;2;10;words
+얼굴;лицо;;people;люди;body_parts;части тела;;;noun;2;10;words
+이;зуб;;people;люди;body_parts;части тела;;;noun;2;10;words
+발;стопа;;people;люди;body_parts;части тела;;;noun;2;10;words
+눈;глаз;;people;люди;body_parts;части тела;;;noun;2;10;words
+목;шея;;people;люди;body_parts;части тела;;;noun;2;10;words
+배;живот;;people;люди;body_parts;части тела;;;noun;2;10;words
+코;нос;;people;люди;body_parts;части тела;;;noun;2;10;words
+팔다;рука;;people;люди;body_parts;части тела;;;noun;2;10;words
+허리;спина (поясница);;people;люди;body_parts;части тела;;;noun;2;10;words
+입;рот;;people;люди;body_parts;части тела;;;noun;2;10;words
+손;кисти;;people;люди;body_parts;части тела;;;noun;2;10;words
+어깨;плечи;;people;люди;body_parts;части тела;;;noun;2;10;words
+참다;терпеть;;condition;состояние;;;;;verb;2;10;expression
+건강하다;здоровый;;condition;состояние;;;;;verb;2;10;words
+아프다;болеть;;condition;состояние;;;;;noun;2;10;words
+감기에 걸리다;простудиться;;condition;состояние;;;;;verb;2;10;expression
+닛다;становится лучше;;condition;состояние;;;;;;2;10;expression
+몸이 안 졸다;плохо себя чувствую;;condition;состояние;;;;;;2;10;expression
+열이나다;температура;;condition;состояние;;;;;noun;2;10;expression
+좋아지다;улучшаться (попровляться);;condition;состояние;;;;;verb;2;10;expression
+다치다;пораниться;;condition;состояние;;;;;verb;2;10;expression
+기침을 하다;кашлять;;condition;состояние;;;;;verb;2;10;words
+비밀;секрет;;annother;другое;;;;;noun;2;10;words
+일찍;рано;;time;время;;;;;adverb;2;10;words
+푹;вдоволь (высыпаться);;annother;другое;;;;;adverb;2;10;words
+전;до, перед;;annother;другое;;;;;adverb;2;10;words
+바꾸다;менять;;action;действие;;;;;verb;2;10;words
+말;слово;;annother;другое;;;;;noun;2;10;words
+빨리;быстро;;annother;другое;;;;;adverb;2;10;words
+약;лекарство;;condition;состояние;;;;;noun;2;10;words
+씻다;мыть / мыться;;action;действие;;;;;verb;2;10;words
+습관;прививка;;condition;состояние;;;;;noun;2;10;words
