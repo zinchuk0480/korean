@@ -9,12 +9,14 @@ ul, li{
 	margin: 0px;
 	list-style: none;
 }
-
-.word_list li:nth-child(2n){
+.word__list-element{
+	display: flex;
+}
+.word__list-element:nth-child(2n){
 	background-color: #eef8f9;	
 }
 
-ul{
+.word_list{
 	display: block;
 	/*min-width: fit-content;*/
 	width: -moz-fit-content;
@@ -24,7 +26,7 @@ ul{
 	padding: 0px 10px;
 }
 
-li{
+.list_menu{
 	display: flex;
 	padding: 0px 20px;
 }
@@ -161,7 +163,7 @@ li{
 	transition: opacity .3s;
 }
 
-li:hover .opacity_cl{
+.word__list-element:hover .opacity_cl{
 	opacity: 1;
 }
 
@@ -181,11 +183,11 @@ li:hover .opacity_cl{
 	transition: flex .3s;
 }
 
-.word_list li:hover, .word_list li:nth-child(2n):hover{
+.word__list-element:hover, .word__list-element:nth-child(2n):hover{
 	background-color: rgba(117,255,177,.3);
 	transition: background-color .2s;
 }
-.word_list li:hover ::before{
+.word__list-element:hover ::before{
 	flex: 0.3 0 auto;
 }
 

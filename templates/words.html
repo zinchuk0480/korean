@@ -52,7 +52,7 @@
 			<ul class='word_list list_active'>
 				{% for key, val in jso.items() %}
 					{% for word in val %}
-						<li>
+						<li class="word__list-element">
 							<span class="korean"> {{ word.original }} </span>
 							<span class="russian"> {{ word.translate }} </span>
 						</li>
@@ -63,7 +63,7 @@
 			{% for key, val in jso.items() %}
 			<ul class='word_list'>
 					{% for word in val %}
-						<li>
+						<li class="word__list-element">
 							<span class="korean"> {{ word.original }} </span>
 							<span class="russian"> {{ word.translate }} </span>
 						</li>

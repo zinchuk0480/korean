@@ -1,7 +1,7 @@
 .wraper_tables{
 	width: 80%;
 	margin: 10px auto;
-	overflow-x: scroll;
+	/*overflow-x: scroll;*/
 }
 
 .table__table-padez,

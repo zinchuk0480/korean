@@ -1,25 +1,42 @@
-.section_title{
-	margin-top: 50px;
+article{
+	margin: 35px 0;
+	padding: 10px 35px;
+	background: linear-gradient(180deg, #f9f9f9, #83805e);
+	box-shadow: 0 10px 15px #282828;
+}
+
+.article_title{
 	text-align: center;
+}
+
+.article__block{
+	margin: 15px 0 10px 0;
+	padding: 10px 35px;
+  box-shadow: 0 7px 15px #282828;
+	background-color: #ffffff2b;
+}
+
+.section__list{
+	margin: 0px auto;
+}
+.section__list-element{
+	padding-left: 1rem;
+}
+
+.description,
+.construction{
+
 }
 
 .big_size{
 	font-size: 1.5rem;
 	vertical-align: middle;
-	font-weight: bold;
-	color: #fff;
+	color: #000;
 }
 
 .line_text{
-	/*height: 50px;*/
-    padding: 4.1px 0;
-    box-sizing: border-box;
-    /*font-size: 2rem;*/
     line-height: 2.3rem;
-    /*white-space: nowrap;*/
-    text-align: center;
-    /*color: #fff;*/
-    background-color: #94babe;
+    overflow-wrap: break-word;
 }
 
 .red_text{
