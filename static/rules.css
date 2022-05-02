@@ -1,10 +1,25 @@
 article{
+	position: relative;
 	margin: 35px 0;
 	padding: 10px 35px;
-	background: linear-gradient(180deg, #f9f9f9, #83805e);
+	background: linear-gradient(180deg, #939393, #83805e);
 	box-shadow: 0 10px 15px #282828;
 }
+.leson_number{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0px!important;
+}
 
+.leson_number a{
+	text-decoration: none;
+	color: #000;
+}
+
+.leson_number a:hover{
+	color: #af0;
+}
 .article_title{
 	text-align: center;
 }
