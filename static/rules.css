@@ -44,12 +44,27 @@ article{
 }
 
 .menu_list{
-	width: 350px;
+	width: 70px;
+    position: relative;
+    right: 100px;
+	cursor:pointer;
+}
+
+.menu_list:hover{
+	width: 270px;
 }
 
 .menu_element{
-	height: 2rem;
-    padding: 5px 10px;
+	margin: 5px 0;
+    padding: 7px 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     background: #4f4f4f;
     color: #fff;
+}
+
+.menu_element:hover{
+    background: #6e6e6e;
+    color: rgb(228, 160, 0);
 }
