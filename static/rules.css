@@ -48,6 +48,7 @@ article{
     position: relative;
     right: 100px;
 	cursor:pointer;
+	transition: width .2s;
 }
 
 .menu_list:hover{
