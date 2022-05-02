@@ -10,6 +10,7 @@ function addMenu(){
 addMenu()
 
 menuElement = document.querySelectorAll('.menu_element')
+console.log('menuElement', menuElement)
 for (let i = 0; i < menuElement.length; i++){
     menuElement[i].onclick = function(){
         window.scrollTo(articleTitle[i].getBoundingClientRect().y + window.pageYOffset - 100)
