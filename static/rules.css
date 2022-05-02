@@ -42,3 +42,14 @@ article{
 .red_text{
 	color: #f22;
 }
+
+.menu_list{
+	width: 350px;
+}
+
+.menu_element{
+	height: 2rem;
+    padding: 5px 10px;
+    background: #4f4f4f;
+    color: #fff;
+}
