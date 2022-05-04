@@ -1,6 +1,10 @@
 .flex_container{
 	display:flex;
 }
+.all_rules{
+	flex: 1 1 70%;
+	margin-left: 30px;
+}
 
 article{
 	position: relative;
@@ -9,6 +13,7 @@ article{
 	background: linear-gradient(180deg, #939393, #83805e);
 	box-shadow: 0 10px 15px #282828;
 }
+
 .leson_number{
 	position: absolute;
 	top: 0;
@@ -24,6 +29,7 @@ article{
 .leson_number a:hover{
 	color: #af0;
 }
+
 .article_title{
 	text-align: center;
 }
@@ -38,6 +44,7 @@ article{
 .section__list{
 	margin: 0px auto;
 }
+
 .section__list-element{
 	padding-left: 1rem;
 }
@@ -62,29 +69,44 @@ article{
 	color: #f22;
 }
 
-.menu_list{
-	width: 70px;
-    position: relative;
-    right: 100px;
-	cursor:pointer;
+.container_nav{
+	flex: 1 1 20%; 
+	height: 90vh;
+	position: sticky;
+	top: 50px;
+	margin-top: 30px;
+	overflow-y: scroll;
+	overflow-x: clip;
 	transition: width .2s;
+	background: #ccc;
+	box-shadow: inset 0 0 15px;
 }
-
-.menu_list:hover{
-	width: 270px;
+/*.container_nav:hover{
+	width: 490px;
+}
+*/
+.menu_list{
+	width: 100%;
+	margin: 30px 0px 5px 0;
+  right: 100px;
+	cursor: pointer;
+	transition: width .2s;
 }
 
 .menu_element{
 	margin: 5px 0;
-    padding: 7px 10px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    background: #4f4f4f;
-    color: #fff;
+  padding: 7px 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background: #4f4f4f;
+  color: #fff;
 }
 
 .menu_element:hover{
     background: #6e6e6e;
-    color: rgb(228, 160, 0);
+    /*color: rgb(228, 160, 0);*/
+}
+.active_menu_element{
+    background: #d79659;
 }
