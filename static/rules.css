@@ -11,9 +11,12 @@ article{
 	margin: 35px 0;
 	padding: 10px 35px;
 	background: linear-gradient(180deg, #939393, #83805e);
+	border-left: 5px solid transparent;
 	box-shadow: 0 10px 15px #282828;
 }
-
+.active_article{
+	border-left: 5px solid #d79659;
+}
 .leson_number{
 	position: absolute;
 	top: 0;
