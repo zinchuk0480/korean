@@ -5,7 +5,6 @@
 	flex: 1 1 70%;
 	margin-left: 30px;
 }
-
 article{
 	position: relative;
 	margin: 35px 0;
@@ -46,10 +45,15 @@ article{
 
 .section__list{
 	margin: 0px auto;
+	list-style-type: revert;
 }
 
 .section__list-element{
 	padding-left: 1rem;
+}
+
+.section__list-element{
+	list-style-type: revert;
 }
 
 .description,
@@ -69,7 +73,7 @@ article{
 }
 
 .red_text{
-	color: #f22;
+	color: #640000;
 }
 
 .container_nav{
@@ -80,9 +84,10 @@ article{
 	margin-top: 30px;
 	overflow-y: scroll;
 	overflow-x: clip;
-	transition: width .2s;
+	transition: width .2s, top .2s;
 	background: #ccc;
 	box-shadow: inset 0 0 15px;
+	z-index: 9999;
 }
 /*.container_nav:hover{
 	width: 490px;
@@ -113,3 +118,66 @@ article{
 .active_menu_element{
     background: #d79659;
 }
+
+.menu_caller{
+	display: none;
+}
+
+
+
+@media screen and (max-width: 750px){
+	.wraper_tables{
+		width: 100%;	
+	}
+	.flex_container{
+		display: flex;
+		flex-direction: column;
+	}
+	.all_rules{
+		margin-left: 0;
+	}
+	article{
+		padding: 10px 15px;
+	}
+	.container_nav{
+		position: fixed;
+		width: 96%;
+		height: 100vh;
+		top: -100%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin-top: 0;
+		padding: 15px;
+	}
+	.container_nav_active{
+		top: 50%;
+	}
+	.menu_caller{
+		display: block;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+		border-radius: 40%;
+		background: #c700ff33;
+		color: #fff;
+		cursor: pointer;
+		z-index: 9999;
+	}
+	.menu_caller_active{
+		background: #b128b6;
+	}
+	.menu_caller_text_container{
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+	.text_menu{
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
