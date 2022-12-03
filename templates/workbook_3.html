@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %} WorkBook-3 {% endblock %}
+
+{% block workbook_3 %}
+<style>
+    
+body {
+    overflow: hidden;
+}
+
+object {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main_menu_container {
+    display: flex;
+}
+
+</style>
+
+<object type="application/pdf"
+    data="../static/workbook_3.pdf"
+    width="90%"
+    height="100%">
+</object>
+
+{% endblock %}
