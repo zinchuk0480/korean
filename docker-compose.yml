@@ -1,0 +1,46 @@
+x-default: &x-default
+  networks:
+    - app-net
+
+x-healthcheck-prop: &x-healthcheck-prop
+  interval: 30s
+  timeout: 5s
+  retries: 3
+
+x-postgres-env: &x-postgres
+  POSTGRES_USER: ${POSTGRES_USER}
+  POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+  POSTGRES_HOST: ${POSTGRES_HOST}
+  POSTGRES_PORT: ${POSTGRES_PORT}
+
+
+services:
+  app:
+    <<: *x-default
+    build:
+      context: .
+      dockerfile: ./docker/app/Dockerfile
+    container_name: han-app
+    ports:
+      - 5555:5555
+    depends_on:
+      - postgres
+    entrypoint: ["/bin/bash", "-c", "python ./backend/app.py"]
+
+  postgres:
+    <<: *x-default
+    build:
+      context: .
+      dockerfile: ./docker/db/Dockerfile
+    container_name: han-db
+    environment:
+      <<: *x-postgres
+    ports:
+      - 5433:5432
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "postgres"]
+      <<: *x-healthcheck-prop
+    
+networks:
+  app-net:
+    driver: bridge
