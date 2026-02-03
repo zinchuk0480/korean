@@ -1,11 +1,12 @@
 from os import path, walk
+import logging
 
 from flask import Flask, render_template, redirect, url_for, request, session
 from flask_login import LoginManager, current_user, login_required, login_user
 #from werkzeug.utils import secure_filename
 #from werkzeug.security import check_password_hash, generate_passwoed_hash
 
-# from model import query_words
+from db import query_words
 #from model import query_count_words
 #from model import query_chine_digits
 #from model import query_korean_digits
@@ -15,6 +16,14 @@ from flask_login import LoginManager, current_user, login_required, login_user
 app = Flask(__name__)
 app.secret_key = 'dev'
 #login_manager = LoginManager(app)
+
+
+logging.basicConfig(
+	level=logging.INFO, 
+	format="%(asctime)s | %(levelname)-8s | %(name)-20s | %(message)s",
+    datefmt="%H:%M:%S",
+)
+
 
 
 #путь к статике
@@ -100,26 +109,27 @@ def words_list():
 	category_name_number = Get_title_from_path_file(numb_file_name)
 
 
-	return dict(words = (
-								all_word, 
-								segment_wor, 
-								category_name, 
-								segment_num, 
-								category_name_number, 
-								segment_time_wor, 
-								category_name_time, 
-								all_word_time,
-								category_name_weather, 
-								all_word_weather,
-								segment_weather_wor 
-							)
-						)
+	return dict(
+		words = (
+				all_word, 
+				segment_wor, 
+				category_name, 
+				segment_num, 
+				category_name_number, 
+				segment_time_wor, 
+				category_name_time, 
+				all_word_time,
+				category_name_weather, 
+				all_word_weather,
+				segment_weather_wor,
+			)
+		)
 
 
 
-# @app.route('/', methods=['GET'])
-# def main_paige():
-#     return render_template('words.html')
+@app.route('/', methods=['GET'])
+def main_paige():
+    return render_template('words.html')
 
 # @app.route('/tables', methods=['GET'])
 # def table():
@@ -137,12 +147,13 @@ def rules():
 
 # WORDS FROM TABLE
 
-# @app.context_processor
-# def all_json():
-#     def get_json():
-#         data = query_words()
-#         return data
-#     return dict(jso = get_json())
+@app.context_processor
+def all_json():
+	def get_json():
+		data = query_words()
+		logging.info(('data ::: ', data))
+		return data
+	return dict(jso = get_json())
 
 #@app.context_processor
 #def digit_chine_json():

@@ -1,13 +1,23 @@
 import os
+import logging
+
 from peewee import *
 
 from flask import Flask
-#import logging
+import logging
 
 
 from playhouse.shortcuts import model_to_dict, dict_to_model
 import json
 from flask_login import UserMixin, current_user
+
+
+logging.basicConfig(
+	level=logging.INFO, 
+	format="%(asctime)s | %(levelname)-8s | %(name)-20s | %(message)s",
+    datefmt="%H:%M:%S",
+)
+
 
 
 usname = os.getenv('PQUSER2')
@@ -58,6 +68,8 @@ db.connect
 def query_words():
 	get_data = Korean_words.select().order_by(Korean_words.general_thema_ru)
 	data_to_json = [model_to_dict(data) for data in get_data]
+
+	logging.info(('data_to_json: ', data_to_json))
 
 	ready_data_json = []
 	for i in data_to_json:
